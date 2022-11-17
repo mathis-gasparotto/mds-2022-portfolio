@@ -44,27 +44,27 @@
 
 @mixin media($keys...){
   @each $key in $keys { 
-    @if ($key == mobile) {
+    @if ($key == 'mobile') {
       @include mobile {
         @content
       } 
     }
-    @else if ($key == tablet-portrait) {
+    @else if ($key == 'tablet-portrait') {
       @include tablet-portrait {
         @content
       } 
     }
-    @else if ($key == tablet-landscape) {
+    @else if ($key == 'tablet-landscape') {
       @include tablet-landscape {
         @content
       } 
     }
-    @else if ($key == laptop) {
+    @else if ($key == 'laptop') {
       @include laptop {
         @content
       } 
     }
-    @else if ($key == desktop) {
+    @else if ($key == 'desktop') {
       @include desktop {
         @content
       } 

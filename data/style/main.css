@@ -1579,46 +1579,33 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.screen-container .nav-links {
+.screen-container .nav-desktop {
   position: fixed;
-  right: 20%;
   top: 0;
   height: 100vh;
   z-index: 10;
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: calc(1400px + .01px)) {
+  .screen-container .nav-desktop {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    right: 20%;
+  }
+}
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .screen-container .nav-links {
+  .screen-container .nav-desktop {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
     right: 17%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .screen-container .nav-links {
+  .screen-container .nav-desktop {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
     right: 13%;
   }
 }
-@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .screen-container .nav-links {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    right: 10%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .screen-container .nav-links {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    right: 7%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container .nav-links {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    right: 2%;
-  }
-}
-.screen-container .nav-links ul {
+.screen-container .nav-desktop .nav-items {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -1626,13 +1613,13 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   left: 0;
 }
-.screen-container .nav-links ul li {
+.screen-container .nav-desktop .nav-items .nav-item {
   opacity: 0;
   transform: translateY(20px);
   -webkit-animation: hide-links 0.5s forwards ease;
           animation: hide-links 0.5s forwards ease;
 }
-.screen-container .nav-links ul li .nav-link {
+.screen-container .nav-desktop .nav-items .nav-item .nav-link {
   cursor: pointer;
   text-decoration: none;
   color: #323232;
@@ -1647,23 +1634,23 @@ body::-webkit-scrollbar-thumb {
   padding: 0 10px;
   position: relative;
 }
-.screen-container .nav-links ul li .nav-link:hover {
+.screen-container .nav-desktop .nav-items .nav-item .nav-link:hover {
   color: #000;
   transform: scale3d(1.1, 1.1, 1.1);
 }
-.screen-container .nav-links ul li .nav-link:hover::before {
+.screen-container .nav-desktop .nav-items .nav-item .nav-link:hover::before {
   /*width: 100%;
   opacity: 1;*/
   transform-origin: 0% 50%;
   transform: scale3d(1, 1, 1);
 }
-.screen-container .nav-links ul li .nav-link:active {
+.screen-container .nav-desktop .nav-items .nav-item .nav-link:active {
   color: #fff;
   /*&::before {
     background-color: $white;
   }*/
 }
-.screen-container .nav-links ul li .nav-link::before {
+.screen-container .nav-desktop .nav-items .nav-item .nav-link::before {
   content: "";
   top: calc(50% - 1px);
   height: 2px;
@@ -1684,7 +1671,7 @@ body::-webkit-scrollbar-thumb {
   background-color: $black;*/
 }
 
-.screen-container.active .nav-links ul li {
+.screen-container.active .nav-desktop .nav-items .nav-item {
   -webkit-animation: appear-links 0.5s forwards ease var(--i);
           animation: appear-links 0.5s forwards ease var(--i);
 }

@@ -56,7 +56,7 @@ $(document).ready(function() {
   const contact = document.getElementById("contact");
   const contact_top = contact.getBoundingClientRect().top;
 
-  const nav_links = document.querySelectorAll(".nav-link");
+  const desktop_nav_links = document.querySelectorAll(".nav-destkop .nav-link");
  
   hamburger_menu.addEventListener("click", () => {
     container.classList.toggle("active");
@@ -65,7 +65,7 @@ $(document).ready(function() {
       container.classList.remove("active");
     });
 
-    nav_links.forEach(nav_link => {
+    desktop_nav_links.forEach(nav_link => {
       nav_link.addEventListener("click", () => {
         container.classList.remove("active");
         event.preventDefault();
