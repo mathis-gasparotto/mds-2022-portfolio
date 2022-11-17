@@ -1,0 +1,149 @@
+.main-container {
+  .main {
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 20;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+  }
+}
+
+.screen-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: $primaryColor;
+  background-image: linear-gradient(135deg, #ffc524 0%, #d88220 74%);
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  .main {
+    background-color: $white;
+  }
+  .page {
+    background-color: $secondaryColor;
+    min-height: 100vh;
+  }
+  .back-page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: .5s;
+    background-color: #000;
+    overflow: hidden;
+  }
+  .back-page.one {
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .back-page.two {
+    opacity: 0.15;
+    z-index: -2;
+  }
+  .back-page.three {
+    opacity: 0.1;
+    z-index: -3;
+  }
+}
+
+.screen-container.active {
+  .main {
+    height: 100vh;
+    overflow: hidden;
+    animation: main-animation 0.5s ease;
+    @include main-transform(310px);
+    @include mobile {
+      animation: main-animation-mobile 0.5s ease;
+      @include main-transform(200px);
+    }
+    @include breakpoint(500px) {
+      animation: main-animation-500px 0.5s ease;
+      @include main-transform(140px);
+    }
+    &:hover {
+      @include main-transform(340px);
+      @include mobile {
+        @include main-transform(230px);
+      }
+      @include breakpoint(500px) {
+        @include main-transform(160px);
+      }
+      ~.back-page.one {
+        @include main-transform(240px);
+        @include mobile {
+          @include main-transform(175px);
+        }
+        @include breakpoint(500px) {
+          @include main-transform(125px);
+        }
+      }
+      ~.back-page.two {
+        @include main-transform(150px);
+        @include mobile {
+          @include main-transform(110px);
+        }
+        @include breakpoint(500px) {
+          @include main-transform(90px);
+        }
+      }
+      ~.back-page.three {
+        @include main-transform(65px);
+        @include mobile {
+          @include main-transform(55px);
+        }
+        @include breakpoint(500px) {
+          @include main-transform(50px);
+        }
+      }
+    }
+  }
+  .back-page.one {
+    animation: back-page-one 0.6s ease-out;
+    @include main-transform(225px);
+    @include mobile {
+      animation: back-page-one-mobile 0.6s ease-out;
+      @include main-transform(150px);
+    }
+    @include breakpoint(500px) {
+      animation: back-page-one-500px 0.6s ease-out;
+      @include main-transform(110px);
+    }
+  }
+  .back-page.two {
+    animation: back-page-two 0.6s ease-out;
+    @include main-transform(140px);
+    @include mobile {
+      animation: back-page-two-mobile 0.6s ease-out;
+      @include main-transform(100px);
+    }
+    @include breakpoint(500px) {
+      animation: back-page-two-500px 0.6s ease-out;
+      @include main-transform(75px);
+    }
+  }
+  .back-page.three {
+    animation: back-page-three 0.6s ease-out;
+    @include main-transform(60px);
+    @include mobile {
+      animation: back-page-three-mobile 0.6s ease-out;
+      @include main-transform(50px);
+    }
+    @include breakpoint(500px) {
+      animation: back-page-three-500px 0.6s ease-out;
+      @include main-transform(40px);
+    }
+  }
+  .click-to-select {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,132 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+::selection {
+  background-color: $primaryColor;
+  color: $secondaryColor;
+}
+
+p.text {
+  font-weight: 400;
+}
+
+@each $fontWeight,
+$weight in $fontWeights {
+  .fw-#{$fontWeight} {
+    font-weight: $weight;
+  }
+}
+
+@each $fontSize,
+$size in $fontSizes {
+  .fs-#{$fontSize} {
+    font-size: $size;
+  }
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  font-weight: $linkWeight;
+  color: $linkColor;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.txt-align-center {
+  text-align: center;
+}
+
+.width-content {
+  max-width: $contentWidth;
+  margin: auto;
+}
+
+.ls-none {
+  list-style: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.read-more {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5em;
+  font-weight: 500;
+  font-family: $primaryFont;
+  &::after {
+    content: ">";
+    margin-left: 5px;
+    font-family: $secondaryFont;
+  }
+}
+
+.bg-secondary {
+  background-color: $secondaryColor;
+}
+
+.bg-light {
+  background-color: $lightColor;
+}
+
+.cl-white {
+  color: $white;
+}
+
+.cl-black {
+  color: $black;
+}
+
+.center {
+  justify-content: center;
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.center.column {
+  align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+body {
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #ddd;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 50px;
+  }
+}

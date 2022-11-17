@@ -1,0 +1,103 @@
+.screen-container {
+  .nav-links {
+    position: fixed;
+    right: 20%;
+    top: 0;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    @include laptop {
+      right: 17%;
+    }
+    @include tablet-landscape {
+      right: 13%;
+    }
+    @include tablet-portrait {
+      right: 10%;
+    }
+    @include mobile {
+      right: 7%;
+    }
+    @include breakpoint(500px) {
+      right: 2%;
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      li {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: hide-links 0.5s forwards ease;
+        .nav-link {
+          cursor: pointer;
+          text-decoration: none;
+          color: $navColor;
+          /*#dedede*/
+          margin: 1.3rem 0;
+          display: inline-block;
+          font-size: 1rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: 0.3s, color 0.1s;
+          // new style
+          padding: 0 10px;
+          position: relative;
+          &:hover {
+            color: $black;
+            transform: scale3d(1.1, 1.1, 1.1);
+            &::before {
+              /*width: 100%;
+              opacity: 1;*/
+              // new style 
+              transform-origin: 0% 50%;
+              transform: scale3d(1, 1, 1);
+            }
+          }
+          &:active {
+            color: $white;
+            /*&::before {
+              background-color: $white;
+            }*/
+          }
+          &::before {
+            content: "";
+            // new style
+            top: calc(50% - (2px/2));
+            height: 2px;
+            transform-origin: 100% 50%;
+            transform: scale3d(0, 1, 1);
+            transition: transform 0.3s cubic-bezier(0.4, 1, 0.8, 1);
+            position: absolute;
+            width: 100%;
+            background: currentColor;
+            left: 0;
+            pointer-events: none;
+            /*display: block;
+            margin: 0 auto;
+            width: 0;
+            height: 2px;
+            transition: 0.5s;
+            opacity: 0;
+            background-color: $black;*/
+          }
+        }
+      }
+    }
+  }
+}
+
+.screen-container.active {
+  .nav-links {
+    ul {
+      li {
+        animation: appear-links 0.5s forwards ease var(--i);
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .send-infos {
+    margin: 0;
+  }
+  input[type="submit"], button[type="submit"] {
+    font-family: $primaryFont;
+    font-size: $fsText;
+  }
+  .input-container {
+    input:not([type="checkbox"]) {
+      height: 50px;
+      &.is-invalid {
+        background-position: right calc(0.375em + 0.1875rem) center !important;
+      }
+    }
+    textarea {
+      resize: vertical;
+    }
+    input:not([type="checkbox"]), textarea {
+      border-radius: 3px;
+      border: none;
+      width: 100%;
+      padding: 20px;
+      font-family: $primaryFont;
+      color: $textColor;
+      font-size: $fsText2;
+      font-weight: $fwLight;
+      &.is-invalid {
+        border: 3px solid #dc3545;
+        padding-right: calc(1.5em + 20px);
+        background-image: url(/data/img/input-invalid.svg);
+        background-repeat: no-repeat;
+        background-position: right calc(0.375em + 0.1875rem) top calc(0.375em + 0.1875rem);
+        background-size: 30px 30px;
+      }
+    }
+    label.required::after {
+      content: ' *';
+    }
+  }
+  .invalid-feedback {
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .9em;
+    color: #dc3545;
+    font-weight: 300;
+  }
+}

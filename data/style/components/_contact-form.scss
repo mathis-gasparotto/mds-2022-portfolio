@@ -1,0 +1,24 @@
+.section.contact-form {
+  color: $white;
+  .container {
+    display: flex;
+    flex-direction: column;
+    @include media(tablet-landscape, laptop, desktop) {
+      flex-direction: row;
+    }
+    align-items: center;
+    gap: 60px;
+    &>div {
+      width: 100%;
+    }
+    .title-container {
+      .title {
+        text-align: center;
+        @include h2;
+        @include media(tablet-landscape, laptop, desktop) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

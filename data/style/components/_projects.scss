@@ -1,0 +1,92 @@
+.section.projects {
+  background-color: $lightColor;
+  .container:not(.projects-show-more) {
+    @include mobile {
+      gap: 70px;
+      padding-bottom: 50px;
+    }
+  }
+  .container {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+        flex-direction: row;
+        &:nth-of-type(2n) {
+          flex-direction: row-reverse;
+        }
+      }
+      .img-container {
+        width: 100%;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+          width: 50%;
+        }
+        .img {
+          width: 100%;
+          margin-bottom: -7px;
+          object-fit: cover;
+          @include desktop {
+            height: 430px;
+          }
+          @include laptop {
+            height: 400px;
+          }
+          @include tablet-landscape {
+            height: 380px;
+          }
+          @include tablet-portrait {
+            height: 360px;
+          }
+          @include mobile {
+            height: 220px;
+          }
+        }
+      }
+      .text-container {
+        max-width: 90%;
+        margin: auto;
+        min-height: 100%;
+        padding: 2em 0;
+        text-align: center;
+        @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+          max-width: 40%;
+          text-align: left;
+        }
+        .content {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .projects-show-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    width: inherit;
+    background-color: $primaryColor;
+    padding: $paddingSpacing 0;
+    @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+      flex-direction: row;
+      gap: 0;
+    }
+    .left,
+    .right {
+      width: 90%;
+      text-align: center;
+      height: 100%;
+      margin: auto;
+      @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.fa {
+  font-family: $fa;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  font-variant: normal;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.fa.fa-dl::before {
+  content: "\f019";
+}
+.fa.fa-phone::before {
+  content: "\f095";
+}
+.fa.fa-envelope::before {
+  content: "\f0e0";
+}
+.fa.fa-linkedin-in::before {
+  content: "\f0e1";
+}
+.fa.fa-github::before {
+  content: "\f09b";
+}

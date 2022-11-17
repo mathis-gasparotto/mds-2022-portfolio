@@ -1,0 +1,33 @@
+.page-content {
+  background-color: $white;
+  .section {
+    padding: $marginSpacing 0;
+    &.full {
+      width: 100%;
+      height: 100vh;
+      &--center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &>.container {
+      margin: 0 auto;
+      @include desktop {
+        max-width: $maxWidthDesktop;
+      }
+      @include laptop {
+        max-width: $maxWidthLaptop;
+      }
+      @include tablet-landscape {
+        max-width: $maxWidthTabletLandscape;
+      }
+      @include tablet-portrait {
+        max-width: $maxWidthTabletPortrait;
+      }
+      @include mobile {
+        max-width: $maxWidthMobile;
+      }
+    }
+  }
+}

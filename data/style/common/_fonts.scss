@@ -1,0 +1,102 @@
+$poppins: (
+  100: '/data/fonts/Poppins-Thin.ttf',
+  200: '/data/fonts/Poppins-ExtraLight.ttf',
+  300: '/data/fonts/Poppins-Light.ttf',
+  400: '/data/fonts/Poppins-Regular.ttf',
+  500: '/data/fonts/Poppins-Medium.ttf',
+  600: '/data/fonts/Poppins-SemiBold.ttf',
+  700: '/data/fonts/Poppins-Bold.ttf',
+  800: '/data/fonts/Poppins-ExtraBold.ttf',
+  900: '/data/fonts/Poppins-Black.ttf',
+);
+
+@each $weight,
+$url in $poppins {
+  @font-face {
+    font-family: 'Poppins';
+    src: url($url);
+    font-weight: $weight;
+    // font-style: normal;
+  }
+}
+
+
+body {
+  font-family: $primaryFont;
+  color: $textColor;
+  @include desktop {
+    font-size: 16px;
+  }
+  @include laptop {
+    font-size: 16px;
+  }
+  @include tablet-landscape {
+    font-size: 15px;
+  }
+  @include tablet-portrait {
+    font-size: 15px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+h1 {
+  font-size: $fsH1;
+}
+
+h2 {
+  font-size: $fsH2;
+}
+
+h3 {
+  font-size: $fsH3;
+}
+
+h4 {
+  font-size: $fsH4;
+}
+
+h5 {
+  font-size: $fsH5;
+}
+
+h6 {
+  font-size: $fsH6;
+}
+
+.bold {
+  font-weight: $fwBold;
+}
+
+.light {
+  font-weight: $fwLight;
+}
+
+.h1-style {
+  font-size: $fsH1;
+}
+
+.h2-style {
+  font-size: $fsH2;
+}
+
+.h3-style {
+  font-size: $fsH3;
+}
+
+.h4-style {
+  font-size: $fsH4;
+}
+
+.h5-style {
+  font-size: $fsH5;
+}
+
+.h6-style {
+  font-size: $fsH6;
+}
+
+.text-style {
+  font-size: $fsText;
+}

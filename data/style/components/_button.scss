@@ -1,0 +1,63 @@
+.btn {
+  @include responsive-transition-btn;
+  display: inline-block;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.6rem 1.3rem;
+  font-weight: 600;
+  &.btn-primary {
+    color: $secondaryColor;
+    background-color: $primaryColor;
+    &:hover {
+      color: $primaryColor;
+      background-color: $secondaryColor;
+      @include white-shadow-btn;
+    }
+  }
+  &.btn-secondary {
+    color: $white;
+    background-color: $secondaryColor;
+    &:hover {
+      color: $secondaryColor;
+      background-color: $white;
+    }
+  }
+  &.read-more-btn {
+    &::after {
+      content: "\f054";
+      font-family:'FontAwesome';
+      margin-left: .5rem;
+      transition: .2s;
+      font-weight: 100;
+    }
+    &:hover::after {
+      margin-left: 1rem;
+      transition: .2s;
+    }
+  }
+  &:hover {
+    @include responsive-transition-btn;
+    //transform: scale(1.05);
+  }
+  &:active {
+    @include responsive-transition-btn;
+    //transform: scale(0.95);
+  }
+  &.btn-dl {
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  &.btn-with-icon {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    i {
+      margin-right: .5rem;
+      font-size: 1.5rem;
+    }
+  }
+}

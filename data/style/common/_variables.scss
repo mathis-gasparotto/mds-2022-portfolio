@@ -1,0 +1,45 @@
+$breakpoints: ( laptop: 1400px, tablet-landscape: 1200px, tablet-portrait: 1023px, mobile: 767px, );   // Max width for each devices
+
+//Colors
+$primaryColor: #fbb03b;
+$secondaryColor: #14171c;
+$headerColor: $secondaryColor;
+$textColor: $secondaryColor;
+$linkColor: $primaryColor;
+$navColor: #323232;
+$lightColor: #ededed;
+$white: #fff;
+$black: #000;
+
+//Fonts
+$primaryFont: "Poppins", sans-serif;
+$secondaryFont: "Roboto", sans-serif;
+$fa: 'FontAwesome';
+$fontSizes: ( 11: 11px, 12: 12px, 13: 13px, 14: 14px, 15: 15px, 16: 16px, 17: 17px, 18: 18px, );
+$fontWeights: ( 300: 300, 400: 400, 500: 500, );
+$fsH1: 4em;
+$fsH2: 3em;
+$fsH3: 2.5em;
+$fsH4: 2em;
+$fsH5: 1.5em;
+$fsH6: 1.2em;
+$fsText: 1em;
+$fsText2: .9em;
+$fwBold: 600;
+$fwLight: 300;
+
+
+// Max Width
+$maxWidthDesktop: 1140px;
+$maxWidthLaptop: 1080px;
+$maxWidthTabletLandscape: 1000px;
+$maxWidthTabletPortrait: 750px;
+$maxWidthMobile: 300px;
+
+// Others
+$linkWeight: 500;
+$contentWidth: 75%;
+$marginSpacing: 4rem;
+$marginSpacing-2: 2rem;
+$marginSpacing-3: 1rem;
+$paddingSpacing: 15px;

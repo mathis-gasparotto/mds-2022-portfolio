@@ -1,0 +1,43 @@
+.section.coordinates {
+  .container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+      flex-direction: row;
+      gap: 0;
+    }
+    .single-coordinate {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: #fff;
+      padding: 40px;
+      gap: 10px;
+      @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+        width: 30%;
+      }
+      .icon {
+        color: $secondaryColor;
+        font-size: 40px;
+        background-color: $primaryColor;
+        border-radius: 50%;
+        width: calc(40px + 2 * 12px);
+        height: calc(40px + 2 * 12px);
+        padding: 12px;
+      }
+      .title {
+        @include h6;
+        @include bold;
+      }
+      .text {
+        @include text;
+        @include light;
+      }
+    }
+  }
+}
