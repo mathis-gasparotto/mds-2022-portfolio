@@ -5,11 +5,9 @@
   .nav-desktop {
     display: none;
   }
-}
-@include media(tablet-landscape, laptop, desktop) {
-  .screen-container {
+  @include media(tablet-landscape, laptop, desktop) {
     .nav-desktop {
-      position: fixed;
+      position: absolute;
       top: 0;
       height: 100vh;
       z-index: 10;
@@ -111,5 +109,4 @@
       }
     }
   }
-
 }

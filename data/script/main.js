@@ -1,27 +1,28 @@
 $(document).ready(function() {
 
-  const navbar = document.getElementById("navbar");
-  const navbar_height = navbar.getBoundingClientRect().height;
+  // const navbar = document.getElementById("navbar");
+  const header = document.getElementById("header");
+  const header_height = header.getBoundingClientRect().height;
   window.onscroll = function() {
     let windowY = window.pageYOffset;
     let contentY = document.getElementById("page-content").getBoundingClientRect().top + windowY;
-    let navbar_scroll = navbar_height + windowY;
-    navbar.style.top = windowY + "px";
-    if (navbar_scroll >= contentY) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    let header_scroll = header_height + windowY;
+    header.style.top = windowY + "px";
     if (windowY >= 50) {
-      navbar.classList.add('mobile-scrolled');
+      header.classList.add('scrolled');
     } else {
-      navbar.classList.remove('mobile-scrolled');
+      header.classList.remove('scrolled');
+    }
+    if (header_scroll >= contentY) {
+      header.classList.add('desktop-scrolled');
+    } else {
+      header.classList.remove('desktop-scrolled');
     }
   }
   
   $(".scroll-animation").click(function(event) {
     $("html, body").animate({
-      scrollTop: $($(this).attr("href")).offset().top
+      scrollTop: $($(this).attr("href")).offset().top - header_height
     }, 1000);
   });
 
@@ -32,9 +33,9 @@ $(document).ready(function() {
 
   function scrollToTop() {
     $("html, body").animate({
-      scrollTop: $("body").offset().top
+      scrollTop: $("body").offset().top - header_height
     }, 1000);
-    navbar.classList.remove('scrolled');
+    header.classList.remove('scrolled', 'desktop-scrolled');
   };
 
   
@@ -70,7 +71,7 @@ $(document).ready(function() {
         container.classList.remove("active");
         event.preventDefault();
         window.scroll({
-          top: (eval(nav_link.getAttribute('href').replace('#', '') + '_top') - navbar_height) + 5,
+          top: (eval(nav_link.getAttribute('href').replace('#', '') + '_top') - header_height) + 5,
           behavior: 'smooth',
         });
       });

@@ -1,7 +1,7 @@
 .screen-container {
   .content {
     position: relative;
-    .navbar {
+    .header {
       position: absolute;
       top: 0;
       left: 0;
@@ -9,7 +9,7 @@
       z-index: 30;
       color: $white;
       // transition: background .1s;
-      &.scrolled {
+      &.scrolled, &.desktop-scrolled {
         background-color: $secondaryColor;
         // transition: background .1s;
         .menu {
@@ -18,23 +18,6 @@
               .inner, .line {
                 fill: $primaryColor;
                 stroke: $primaryColor;
-              }
-            }
-          }
-        }
-      }
-      &.mobile-scrolled {
-        @include mobile {
-          transition: 0s !important;
-          background-color: $secondaryColor;
-          // transition: background .1s;
-          .menu {
-            .logo {
-              .logo-svg {
-                .inner, .line {
-                  fill: $primaryColor;
-                  stroke: $primaryColor;
-                }
               }
             }
           }
@@ -107,7 +90,7 @@
 
 .screen-container.active {
   .content {
-    .navbar {
+    .header {
       color: $black;
       .menu {
         .logo {
