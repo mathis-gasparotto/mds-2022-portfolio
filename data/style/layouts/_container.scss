@@ -48,6 +48,9 @@
     opacity: 0.1;
     z-index: -3;
   }
+  .click-to-select {
+    display: none;
+  }
 }
 
 .screen-container.active {
@@ -138,6 +141,7 @@
     }
   }
   .click-to-select {
+    display: block;
     cursor: pointer;
     position: absolute;
     width: 100%;

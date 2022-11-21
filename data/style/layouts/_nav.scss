@@ -1,11 +1,18 @@
 .screen-container {
   .nav-mobile {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
   }
   .nav-desktop {
     display: none;
   }
   @include media(tablet-landscape, laptop, desktop) {
+    .nav-mobile {
+      display: none;
+    }
     .nav-desktop {
       position: absolute;
       top: 0;

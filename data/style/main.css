@@ -335,31 +335,31 @@ body {
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   body {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   body {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   body {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     font-size: 15px;
   }
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   body {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     font-size: 15px;
   }
 }
 @media screen and (max-width: 767px) {
   body {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     font-size: 14px;
   }
 }
@@ -739,212 +739,6 @@ body::-webkit-scrollbar-thumb {
   --bs-alert-border-color: #bcbebf;
 }
 
-.main-container .main {
-  position: relative;
-  width: 100%;
-  left: 0;
-  z-index: 20;
-  transform-origin: left;
-  transform-style: preserve-3d;
-  transition: 0.5s;
-}
-
-.screen-container {
-  min-height: 100vh;
-  width: 100%;
-  background-color: #fbb03b;
-  background-image: linear-gradient(135deg, #ffc524 0%, #d88220 74%);
-  overflow-x: hidden;
-  transform-style: preserve-3d;
-}
-.screen-container .main {
-  background-color: #fff;
-}
-.screen-container .page {
-  background-color: #14171c;
-  min-height: 100vh;
-}
-.screen-container .back-page {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  transform-style: preserve-3d;
-  transform-origin: left;
-  transition: 0.5s;
-  background-color: #000;
-  overflow: hidden;
-}
-.screen-container .back-page.one {
-  opacity: 0.2;
-  z-index: -1;
-}
-.screen-container .back-page.two {
-  opacity: 0.15;
-  z-index: -2;
-}
-.screen-container .back-page.three {
-  opacity: 0.1;
-  z-index: -3;
-}
-
-.screen-container.active .main {
-  height: 100vh;
-  overflow: hidden;
-  -webkit-animation: main-animation 0.5s ease;
-          animation: main-animation 0.5s ease;
-  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-}
-@media screen and (max-width: 767px) {
-  .screen-container.active .main {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    -webkit-animation: main-animation-mobile 0.5s ease;
-            animation: main-animation-mobile 0.5s ease;
-    transform: perspective(1300px) rotateY(20deg) translateZ(200px) scale(0.5);
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container.active .main {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    -webkit-animation: main-animation-500px 0.5s ease;
-            animation: main-animation-500px 0.5s ease;
-    transform: perspective(1300px) rotateY(20deg) translateZ(140px) scale(0.5);
-  }
-}
-.screen-container.active .main:hover {
-  transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
-}
-@media screen and (max-width: 767px) {
-  .screen-container.active .main:hover {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container.active .main:hover {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
-  }
-}
-.screen-container.active .main:hover ~ .back-page.one {
-  transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
-}
-@media screen and (max-width: 767px) {
-  .screen-container.active .main:hover ~ .back-page.one {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    transform: perspective(1300px) rotateY(20deg) translateZ(175px) scale(0.5);
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container.active .main:hover ~ .back-page.one {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    transform: perspective(1300px) rotateY(20deg) translateZ(125px) scale(0.5);
-  }
-}
-.screen-container.active .main:hover ~ .back-page.two {
-  transform: perspective(1300px) rotateY(20deg) translateZ(150px) scale(0.5);
-}
-@media screen and (max-width: 767px) {
-  .screen-container.active .main:hover ~ .back-page.two {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    transform: perspective(1300px) rotateY(20deg) translateZ(110px) scale(0.5);
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container.active .main:hover ~ .back-page.two {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    transform: perspective(1300px) rotateY(20deg) translateZ(90px) scale(0.5);
-  }
-}
-.screen-container.active .main:hover ~ .back-page.three {
-  transform: perspective(1300px) rotateY(20deg) translateZ(65px) scale(0.5);
-}
-@media screen and (max-width: 767px) {
-  .screen-container.active .main:hover ~ .back-page.three {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    transform: perspective(1300px) rotateY(20deg) translateZ(55px) scale(0.5);
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container.active .main:hover ~ .back-page.three {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    transform: perspective(1300px) rotateY(20deg) translateZ(50px) scale(0.5);
-  }
-}
-.screen-container.active .back-page.one {
-  -webkit-animation: back-page-one 0.6s ease-out;
-          animation: back-page-one 0.6s ease-out;
-  transform: perspective(1300px) rotateY(20deg) translateZ(225px) scale(0.5);
-}
-@media screen and (max-width: 767px) {
-  .screen-container.active .back-page.one {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    -webkit-animation: back-page-one-mobile 0.6s ease-out;
-            animation: back-page-one-mobile 0.6s ease-out;
-    transform: perspective(1300px) rotateY(20deg) translateZ(150px) scale(0.5);
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container.active .back-page.one {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    -webkit-animation: back-page-one-500px 0.6s ease-out;
-            animation: back-page-one-500px 0.6s ease-out;
-    transform: perspective(1300px) rotateY(20deg) translateZ(110px) scale(0.5);
-  }
-}
-.screen-container.active .back-page.two {
-  -webkit-animation: back-page-two 0.6s ease-out;
-          animation: back-page-two 0.6s ease-out;
-  transform: perspective(1300px) rotateY(20deg) translateZ(140px) scale(0.5);
-}
-@media screen and (max-width: 767px) {
-  .screen-container.active .back-page.two {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    -webkit-animation: back-page-two-mobile 0.6s ease-out;
-            animation: back-page-two-mobile 0.6s ease-out;
-    transform: perspective(1300px) rotateY(20deg) translateZ(100px) scale(0.5);
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container.active .back-page.two {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    -webkit-animation: back-page-two-500px 0.6s ease-out;
-            animation: back-page-two-500px 0.6s ease-out;
-    transform: perspective(1300px) rotateY(20deg) translateZ(75px) scale(0.5);
-  }
-}
-.screen-container.active .back-page.three {
-  -webkit-animation: back-page-three 0.6s ease-out;
-          animation: back-page-three 0.6s ease-out;
-  transform: perspective(1300px) rotateY(20deg) translateZ(60px) scale(0.5);
-}
-@media screen and (max-width: 767px) {
-  .screen-container.active .back-page.three {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    -webkit-animation: back-page-three-mobile 0.6s ease-out;
-            animation: back-page-three-mobile 0.6s ease-out;
-    transform: perspective(1300px) rotateY(20deg) translateZ(50px) scale(0.5);
-  }
-}
-@media screen and (max-width: 500px) {
-  .screen-container.active .back-page.three {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
-    -webkit-animation: back-page-three-500px 0.6s ease-out;
-            animation: back-page-three-500px 0.6s ease-out;
-    transform: perspective(1300px) rotateY(20deg) translateZ(40px) scale(0.5);
-  }
-}
-.screen-container.active .click-to-select {
-  cursor: pointer;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
 .btn {
   transition: 0.25s, background-color 0.25s, color 0.25s, font-size 0s, padding 0s !important;
   display: inline-block;
@@ -1014,7 +808,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.skills .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
     align-items: flex-start;
@@ -1022,7 +816,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.skills .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
     align-items: flex-start;
@@ -1030,7 +824,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.skills .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
     align-items: flex-start;
@@ -1038,7 +832,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.skills .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
     align-items: flex-start;
@@ -1054,25 +848,25 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.skills .container .skills-section {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 30%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.skills .container .skills-section {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 30%;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.skills .container .skills-section {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 30%;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.skills .container .skills-section {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 30%;
   }
 }
@@ -1100,7 +894,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 767px) {
   .section.projects .container:not(.projects-show-more) {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     gap: 70px;
     padding-bottom: 50px;
   }
@@ -1119,7 +913,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .container .project-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
   .section.projects .container .project-container:nth-of-type(2n) {
@@ -1128,7 +922,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .container .project-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
   .section.projects .container .project-container:nth-of-type(2n) {
@@ -1137,7 +931,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .container .project-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
   .section.projects .container .project-container:nth-of-type(2n) {
@@ -1146,7 +940,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .container .project-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
   .section.projects .container .project-container:nth-of-type(2n) {
@@ -1159,25 +953,25 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 50%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 50%;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 50%;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 50%;
   }
 }
@@ -1189,31 +983,31 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .container .project-container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     height: 430px;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .container .project-container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     height: 400px;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .container .project-container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     height: 380px;
   }
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .container .project-container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     height: 360px;
   }
 }
 @media screen and (max-width: 767px) {
   .section.projects .container .project-container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     height: 220px;
   }
 }
@@ -1226,28 +1020,28 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .container .project-container .text-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 40%;
     text-align: left;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .container .project-container .text-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 40%;
     text-align: left;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .container .project-container .text-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 40%;
     text-align: left;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .container .project-container .text-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 40%;
     text-align: left;
   }
@@ -1267,28 +1061,28 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .projects-show-more {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .projects-show-more {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .projects-show-more {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .projects-show-more {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
@@ -1303,28 +1097,28 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .projects-show-more .left,
 .section.projects .projects-show-more .right {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 100%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .projects-show-more .left,
 .section.projects .projects-show-more .right {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 100%;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .projects-show-more .left,
 .section.projects .projects-show-more .right {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 100%;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .projects-show-more .left,
 .section.projects .projects-show-more .right {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 100%;
   }
 }
@@ -1338,28 +1132,28 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.who .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     text-align: left;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.who .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     text-align: left;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.who .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     text-align: left;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.who .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     text-align: left;
   }
@@ -1378,25 +1172,25 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.who .container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 100%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.who .container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 100%;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.who .container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 100%;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.who .container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 100%;
   }
 }
@@ -1405,25 +1199,25 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.who .container .content-container .text {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     margin: 2rem 0;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.who .container .content-container .text {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     margin: 2rem 0;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.who .container .content-container .text {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     margin: 2rem 0;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.who .container .content-container .text {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     margin: 2rem 0;
   }
 }
@@ -1448,28 +1242,28 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.coordinates .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.coordinates .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.coordinates .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.coordinates .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
@@ -1486,25 +1280,25 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.coordinates .container .single-coordinate {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 30%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.coordinates .container .single-coordinate {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 30%;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.coordinates .container .single-coordinate {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 30%;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.coordinates .container .single-coordinate {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     width: 30%;
   }
 }
@@ -1537,19 +1331,19 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.contact-form .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.contact-form .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.contact-form .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
 }
@@ -1562,32 +1356,249 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.contact-form .container .title-container .title {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     text-align: left;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.contact-form .container .title-container .title {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     text-align: left;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.contact-form .container .title-container .title {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     text-align: left;
   }
 }
 
+.main-container .main {
+  position: relative;
+  width: 100%;
+  left: 0;
+  z-index: 20;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.screen-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fbb03b;
+  background-image: linear-gradient(135deg, #ffc524 0%, #d88220 74%);
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+}
+.screen-container .main {
+  background-color: #fff;
+}
+.screen-container .page {
+  background-color: #14171c;
+  min-height: 100vh;
+}
+.screen-container .back-page {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: 0.5s;
+  background-color: #000;
+  overflow: hidden;
+}
+.screen-container .back-page.one {
+  opacity: 0.2;
+  z-index: -1;
+}
+.screen-container .back-page.two {
+  opacity: 0.15;
+  z-index: -2;
+}
+.screen-container .back-page.three {
+  opacity: 0.1;
+  z-index: -3;
+}
+.screen-container .click-to-select {
+  display: none;
+}
+
+.screen-container.active .main {
+  height: 100vh;
+  overflow: hidden;
+  -webkit-animation: main-animation 0.5s ease;
+          animation: main-animation 0.5s ease;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+@media screen and (max-width: 767px) {
+  .screen-container.active .main {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    -webkit-animation: main-animation-mobile 0.5s ease;
+            animation: main-animation-mobile 0.5s ease;
+    transform: perspective(1300px) rotateY(20deg) translateZ(200px) scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .screen-container.active .main {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    -webkit-animation: main-animation-500px 0.5s ease;
+            animation: main-animation-500px 0.5s ease;
+    transform: perspective(1300px) rotateY(20deg) translateZ(140px) scale(0.5);
+  }
+}
+.screen-container.active .main:hover {
+  transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+}
+@media screen and (max-width: 767px) {
+  .screen-container.active .main:hover {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .screen-container.active .main:hover {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+  }
+}
+.screen-container.active .main:hover ~ .back-page.one {
+  transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+}
+@media screen and (max-width: 767px) {
+  .screen-container.active .main:hover ~ .back-page.one {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    transform: perspective(1300px) rotateY(20deg) translateZ(175px) scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .screen-container.active .main:hover ~ .back-page.one {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    transform: perspective(1300px) rotateY(20deg) translateZ(125px) scale(0.5);
+  }
+}
+.screen-container.active .main:hover ~ .back-page.two {
+  transform: perspective(1300px) rotateY(20deg) translateZ(150px) scale(0.5);
+}
+@media screen and (max-width: 767px) {
+  .screen-container.active .main:hover ~ .back-page.two {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    transform: perspective(1300px) rotateY(20deg) translateZ(110px) scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .screen-container.active .main:hover ~ .back-page.two {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    transform: perspective(1300px) rotateY(20deg) translateZ(90px) scale(0.5);
+  }
+}
+.screen-container.active .main:hover ~ .back-page.three {
+  transform: perspective(1300px) rotateY(20deg) translateZ(65px) scale(0.5);
+}
+@media screen and (max-width: 767px) {
+  .screen-container.active .main:hover ~ .back-page.three {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    transform: perspective(1300px) rotateY(20deg) translateZ(55px) scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .screen-container.active .main:hover ~ .back-page.three {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    transform: perspective(1300px) rotateY(20deg) translateZ(50px) scale(0.5);
+  }
+}
+.screen-container.active .back-page.one {
+  -webkit-animation: back-page-one 0.6s ease-out;
+          animation: back-page-one 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(225px) scale(0.5);
+}
+@media screen and (max-width: 767px) {
+  .screen-container.active .back-page.one {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    -webkit-animation: back-page-one-mobile 0.6s ease-out;
+            animation: back-page-one-mobile 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(150px) scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .screen-container.active .back-page.one {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    -webkit-animation: back-page-one-500px 0.6s ease-out;
+            animation: back-page-one-500px 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(110px) scale(0.5);
+  }
+}
+.screen-container.active .back-page.two {
+  -webkit-animation: back-page-two 0.6s ease-out;
+          animation: back-page-two 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(140px) scale(0.5);
+}
+@media screen and (max-width: 767px) {
+  .screen-container.active .back-page.two {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    -webkit-animation: back-page-two-mobile 0.6s ease-out;
+            animation: back-page-two-mobile 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(100px) scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .screen-container.active .back-page.two {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    -webkit-animation: back-page-two-500px 0.6s ease-out;
+            animation: back-page-two-500px 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(75px) scale(0.5);
+  }
+}
+.screen-container.active .back-page.three {
+  -webkit-animation: back-page-three 0.6s ease-out;
+          animation: back-page-three 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(60px) scale(0.5);
+}
+@media screen and (max-width: 767px) {
+  .screen-container.active .back-page.three {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    -webkit-animation: back-page-three-mobile 0.6s ease-out;
+            animation: back-page-three-mobile 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(50px) scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .screen-container.active .back-page.three {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    -webkit-animation: back-page-three-500px 0.6s ease-out;
+            animation: back-page-three-500px 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(40px) scale(0.5);
+  }
+}
+.screen-container.active .click-to-select {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
 .screen-container .nav-mobile {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 .screen-container .nav-desktop {
   display: none;
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .screen-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  .screen-container .nav-mobile {
+    display: none;
   }
   .screen-container .nav-desktop {
     position: absolute;
@@ -1600,19 +1611,19 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (min-width: calc(1400px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 20%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 17%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 13%;
   }
 }
@@ -1691,7 +1702,10 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .screen-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  .screen-container .nav-mobile {
+    display: none;
   }
   .screen-container .nav-desktop {
     position: absolute;
@@ -1704,19 +1718,19 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (min-width: calc(1400px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 20%;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 17%;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 13%;
   }
 }
@@ -1795,7 +1809,10 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .screen-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  .screen-container .nav-mobile {
+    display: none;
   }
   .screen-container .nav-desktop {
     position: absolute;
@@ -1808,19 +1825,19 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: calc(1400px + .01px)) and (min-width: calc(1400px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 20%;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 17%;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .screen-container .nav-desktop {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     right: 13%;
   }
 }
@@ -1918,31 +1935,31 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .page-content .section > .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 1140px;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .page-content .section > .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 1080px;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .page-content .section > .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 1000px;
   }
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .page-content .section > .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 750px;
   }
 }
 @media screen and (max-width: 767px) {
   .page-content .section > .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     max-width: 300px;
   }
 }
@@ -1993,25 +2010,25 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .main-hero .overlay .inner .btns {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .main-hero .overlay .inner .btns {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .main-hero .overlay .inner .btns {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .main-hero .overlay .inner .btns {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
   }
 }
@@ -2030,12 +2047,65 @@ body::-webkit-scrollbar-thumb {
   z-index: 30;
   color: #fff;
 }
-.screen-container .content .header.scrolled, .screen-container .content .header.desktop-scrolled {
-  background-color: #14171c;
+@media screen and (max-width: 767px) {
+  .screen-container .content .header {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  .screen-container .content .header.scrolled {
+    background-color: #14171c;
+  }
+  .screen-container .content .header.scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.scrolled .menu .logo .logo-svg .line {
+    fill: #fbb03b;
+    stroke: #fbb03b;
+  }
 }
-.screen-container .content .header.scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.scrolled .menu .logo .logo-svg .line, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
-  fill: #fbb03b;
-  stroke: #fbb03b;
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .screen-container .content .header {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  .screen-container .content .header.desktop-scrolled {
+    background-color: #14171c;
+  }
+  .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
+    fill: #fbb03b;
+    stroke: #fbb03b;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .screen-container .content .header {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  .screen-container .content .header.desktop-scrolled {
+    background-color: #14171c;
+  }
+  .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
+    fill: #fbb03b;
+    stroke: #fbb03b;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .screen-container .content .header {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  .screen-container .content .header.desktop-scrolled {
+    background-color: #14171c;
+  }
+  .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
+    fill: #fbb03b;
+    stroke: #fbb03b;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .screen-container .content .header {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  .screen-container .content .header.desktop-scrolled {
+    background-color: #14171c;
+  }
+  .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
+    fill: #fbb03b;
+    stroke: #fbb03b;
+  }
 }
 .screen-container .content .header .menu {
   max-width: 72rem;
@@ -2049,19 +2119,19 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .screen-container .content .header .menu {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     padding: 10px 2rem;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .screen-container .content .header .menu {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     padding: 10px 2rem;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .screen-container .content .header .menu {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s;
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     padding: 10px 2rem;
   }
 }

@@ -74,7 +74,7 @@
 
 // ------------------------- Transitions -------------------------
 @mixin responsive-transition {
-  transition: all .4s ease, font-size 0s, background-color 0s, color 0s;
+  transition: all .4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
 }
 
 @mixin responsive-transition-btn {

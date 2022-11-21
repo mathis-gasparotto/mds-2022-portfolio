@@ -9,15 +9,33 @@
       z-index: 30;
       color: $white;
       // transition: background .1s;
-      &.scrolled, &.desktop-scrolled {
-        background-color: $secondaryColor;
-        // transition: background .1s;
-        .menu {
-          .logo {
-            .logo-svg {
-              .inner, .line {
-                fill: $primaryColor;
-                stroke: $primaryColor;
+      @include mobile {
+        &.scrolled {
+          background-color: $secondaryColor;
+          // transition: background .1s;
+          .menu {
+            .logo {
+              .logo-svg {
+                .inner, .line {
+                  fill: $primaryColor;
+                  stroke: $primaryColor;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include media (tablet-portrait, tablet-landscape, laptop, desktop) {
+        &.desktop-scrolled {
+          background-color: $secondaryColor;
+          // transition: background .1s;
+          .menu {
+            .logo {
+              .logo-svg {
+                .inner, .line {
+                  fill: $primaryColor;
+                  stroke: $primaryColor;
+                }
               }
             }
           }
