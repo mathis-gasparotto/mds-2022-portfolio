@@ -23,14 +23,19 @@
       width: 30%;
      }
      .img {
-       width: calc(40px + 2 * 12px);
-       height: calc(40px + 2 * 12px);
-       background-color: $primaryColor;
-       padding: 12px 0;
-       border-radius: 50%;
-       &.icon-dev {
-         padding: 10px;
+       width: 100px;
+       height: 100px;
+      //  width: calc(40px + 2 * 12px);
+      //  height: calc(40px + 2 * 12px);
+       //  background-color: $primaryColor;
+      //  padding: 12px 0;
+      //  border-radius: 50%;
+       path {
+        fill: $primaryColor;
        }
+      //  &.icon-dev {
+      //    padding: 10px;
+      //  }
      }
      .title {
        @include h6;

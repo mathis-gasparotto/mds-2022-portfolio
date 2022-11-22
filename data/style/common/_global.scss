@@ -83,12 +83,16 @@ a {
   }
 }
 
-.bg-secondary {
-  background-color: $secondaryColor;
-}
-
-.bg-light {
-  background-color: $lightColor;
+.bg {
+  &-secondary {
+    background-color: $secondaryColor;
+  }
+  &-light {
+    background-color: $lightColor;
+  }
+  &-white {
+    background-color: #fff;
+  }
 }
 
 .cl-white {
