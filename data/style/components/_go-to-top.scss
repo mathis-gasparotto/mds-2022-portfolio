@@ -1,0 +1,31 @@
+.screen-container {
+  .go-to-top {
+    position: absolute;
+    right: 3%;
+    top: 0;
+    z-index: 99;
+    opacity: 0;
+    @include responsive-transition;
+    @include media (tablet-landscape, laptop, desktop) {
+      margin-top: 80px;
+      right: 2%;
+    }
+    .go-to-top-link {
+      border-radius: 50%;
+      display: block;
+      padding: .5rem;
+      @include shadow-global;
+      .icon {
+        width: 30px;
+        display: block;
+        fill: $secondaryColor;
+      }
+    }
+  }
+
+  &.active {
+    .go-to-top {
+      display: none;
+    }
+  }
+}

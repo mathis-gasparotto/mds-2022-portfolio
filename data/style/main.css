@@ -1233,6 +1233,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section.coordinates .container {
+  font-style: normal;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -1372,6 +1373,50 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.screen-container .go-to-top {
+  position: absolute;
+  right: 3%;
+  top: 0;
+  z-index: 99;
+  opacity: 0;
+  transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .screen-container .go-to-top {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    margin-top: 80px;
+    right: 2%;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .screen-container .go-to-top {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    margin-top: 80px;
+    right: 2%;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .screen-container .go-to-top {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    margin-top: 80px;
+    right: 2%;
+  }
+}
+.screen-container .go-to-top .go-to-top-link {
+  border-radius: 50%;
+  display: block;
+  padding: 0.5rem;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
+}
+.screen-container .go-to-top .go-to-top-link .icon {
+  width: 30px;
+  display: block;
+  fill: #14171c;
+}
+.screen-container.active .go-to-top {
+  display: none;
+}
+
 .main-container .main {
   position: relative;
   width: 100%;
@@ -1390,12 +1435,33 @@ body::-webkit-scrollbar-thumb {
   overflow-x: hidden;
   transform-style: preserve-3d;
 }
+.screen-container .content {
+  position: relative;
+}
 .screen-container .main {
   background-color: #fff;
 }
 .screen-container .page {
   background-color: #14171c;
   min-height: 100vh;
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .screen-container .page {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding-bottom: 0 !important;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .screen-container .page {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding-bottom: 0 !important;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .screen-container .page {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding-bottom: 0 !important;
+  }
 }
 .screen-container .back-page {
   position: absolute;
@@ -1424,7 +1490,6 @@ body::-webkit-scrollbar-thumb {
 .screen-container .click-to-select {
   display: none;
 }
-
 .screen-container.active .main {
   height: 100vh;
   overflow: hidden;
@@ -2062,175 +2127,508 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0px 0px 9px 2px rgba(156, 156, 156, 0.5);
 }
 
-.screen-container .content {
-  position: relative;
+body .screen-container .content .header {
+  display: none;
 }
-.screen-container .content .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 30;
-  color: #fff;
-}
-@media screen and (max-width: 767px) {
-  .screen-container .content .header {
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  body {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
   }
-  .screen-container .content .header.scrolled {
+  body .screen-container .header {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    color: #fff;
+  }
+  body .screen-container .header.scrolled {
     background-color: #14171c;
   }
-  .screen-container .content .header.scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.scrolled .menu .logo .logo-svg .line {
+  body .screen-container .header.scrolled .menu .logo .logo-svg .inner, body .screen-container .header.scrolled .menu .logo .logo-svg .line {
     fill: #fbb03b;
     stroke: #fbb03b;
+  }
+  body .screen-container .header .menu {
+    max-width: 72rem;
+    width: 100%;
+    padding: 20px 2rem 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  body .screen-container .header .menu {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding: 10px 2rem;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  body .screen-container .header .menu {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding: 10px 2rem;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (min-width: calc(1400px + .01px)) {
+  body .screen-container .header .menu {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding: 10px 2rem;
   }
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .screen-container .content .header {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  body .screen-container .header .menu .logo .logo-svg {
+    fill: #fff;
+    width: 100px;
+    transition: 0.3s;
+    stroke: #fff;
   }
-  .screen-container .content .header.desktop-scrolled {
+  body .screen-container .header .menu .logo .logo-svg .line {
+    stroke-width: 20px;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  body .screen-container .header .menu .hamburger-menu {
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #eee 1px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  body .screen-container .header .menu .hamburger-menu:hover {
+    transform: scale(1.05);
+  }
+  body .screen-container .header .menu .hamburger-menu .bar {
+    width: 1.9rem;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #eee;
+    transition: 0.5s;
+    position: relative;
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::before, body .screen-container .header .menu .hamburger-menu .bar::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #eee;
+    transition: 0.3s;
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::before {
+    transform: translateY(-9px);
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::after {
+    transform: translateY(9px);
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  body .screen-container.active .header {
+    color: #000;
+  }
+  body .screen-container.active .header .menu .logo .logo-svg {
+    fill: #14171c;
+    stroke: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu {
+    border-color: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar,
+body .screen-container.active .header .menu .hamburger-menu .bar::before,
+body .screen-container.active .header .menu .hamburger-menu .bar::after {
     background-color: #14171c;
   }
-  .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
-    fill: #fbb03b;
-    stroke: #fbb03b;
+  body .screen-container.active .header .menu .hamburger-menu .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar::before {
+    transform: rotate(45deg) translateY(0);
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar::after {
+    transform: rotate(-45deg) translateY(0);
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .screen-container .content .header {
+  body {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
   }
-  .screen-container .content .header.desktop-scrolled {
+  body .screen-container .header {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    color: #fff;
+  }
+  body .screen-container .header.scrolled {
     background-color: #14171c;
   }
-  .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
+  body .screen-container .header.scrolled .menu .logo .logo-svg .inner, body .screen-container .header.scrolled .menu .logo .logo-svg .line {
     fill: #fbb03b;
     stroke: #fbb03b;
   }
+  body .screen-container .header .menu {
+    max-width: 72rem;
+    width: 100%;
+    padding: 20px 2rem 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
 }
-@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .screen-container .content .header {
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  body .screen-container .header .menu {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-  }
-  .screen-container .content .header.desktop-scrolled {
-    background-color: #14171c;
-  }
-  .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
-    fill: #fbb03b;
-    stroke: #fbb03b;
+    padding: 10px 2rem;
   }
 }
-@media screen and (min-width: calc(1400px + .01px)) {
-  .screen-container .content .header {
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  body .screen-container .header .menu {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-  }
-  .screen-container .content .header.desktop-scrolled {
-    background-color: #14171c;
-  }
-  .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .inner, .screen-container .content .header.desktop-scrolled .menu .logo .logo-svg .line {
-    fill: #fbb03b;
-    stroke: #fbb03b;
+    padding: 10px 2rem;
   }
 }
-.screen-container .content .header .menu {
-  max-width: 72rem;
-  width: 100%;
-  padding: 20px 2rem 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (min-width: calc(1400px + .01px)) {
+  body .screen-container .header .menu {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding: 10px 2rem;
+  }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .screen-container .content .header .menu {
+  body .screen-container .header .menu .logo .logo-svg {
+    fill: #fff;
+    width: 100px;
+    transition: 0.3s;
+    stroke: #fff;
+  }
+  body .screen-container .header .menu .logo .logo-svg .line {
+    stroke-width: 20px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  body .screen-container .header .menu .hamburger-menu {
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #eee 1px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  body .screen-container .header .menu .hamburger-menu:hover {
+    transform: scale(1.05);
+  }
+  body .screen-container .header .menu .hamburger-menu .bar {
+    width: 1.9rem;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #eee;
+    transition: 0.5s;
+    position: relative;
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::before, body .screen-container .header .menu .hamburger-menu .bar::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #eee;
+    transition: 0.3s;
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::before {
+    transform: translateY(-9px);
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::after {
+    transform: translateY(9px);
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  body .screen-container.active .header {
+    color: #000;
+  }
+  body .screen-container.active .header .menu .logo .logo-svg {
+    fill: #14171c;
+    stroke: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu {
+    border-color: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar,
+body .screen-container.active .header .menu .hamburger-menu .bar::before,
+body .screen-container.active .header .menu .hamburger-menu .bar::after {
+    background-color: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar::before {
+    transform: rotate(45deg) translateY(0);
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar::after {
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  body {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  body .screen-container .header {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    color: #fff;
+  }
+  body .screen-container .header.scrolled {
+    background-color: #14171c;
+  }
+  body .screen-container .header.scrolled .menu .logo .logo-svg .inner, body .screen-container .header.scrolled .menu .logo .logo-svg .line {
+    fill: #fbb03b;
+    stroke: #fbb03b;
+  }
+  body .screen-container .header .menu {
+    max-width: 72rem;
+    width: 100%;
+    padding: 20px 2rem 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  body .screen-container .header .menu {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding: 10px 2rem;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  body .screen-container .header .menu {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding: 10px 2rem;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (min-width: calc(1400px + .01px)) {
+  body .screen-container .header .menu {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     padding: 10px 2rem;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .screen-container .content .header .menu {
+  body .screen-container .header .menu .logo .logo-svg {
+    fill: #fff;
+    width: 100px;
+    transition: 0.3s;
+    stroke: #fff;
+  }
+  body .screen-container .header .menu .logo .logo-svg .line {
+    stroke-width: 20px;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  body .screen-container .header .menu .hamburger-menu {
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #eee 1px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  body .screen-container .header .menu .hamburger-menu:hover {
+    transform: scale(1.05);
+  }
+  body .screen-container .header .menu .hamburger-menu .bar {
+    width: 1.9rem;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #eee;
+    transition: 0.5s;
+    position: relative;
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::before, body .screen-container .header .menu .hamburger-menu .bar::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #eee;
+    transition: 0.3s;
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::before {
+    transform: translateY(-9px);
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::after {
+    transform: translateY(9px);
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  body .screen-container.active .header {
+    color: #000;
+  }
+  body .screen-container.active .header .menu .logo .logo-svg {
+    fill: #14171c;
+    stroke: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu {
+    border-color: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar,
+body .screen-container.active .header .menu .hamburger-menu .bar::before,
+body .screen-container.active .header .menu .hamburger-menu .bar::after {
+    background-color: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar::before {
+    transform: rotate(45deg) translateY(0);
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar::after {
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  body {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+  }
+  body .screen-container .header {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    color: #fff;
+  }
+  body .screen-container .header.scrolled {
+    background-color: #14171c;
+  }
+  body .screen-container .header.scrolled .menu .logo .logo-svg .inner, body .screen-container .header.scrolled .menu .logo .logo-svg .line {
+    fill: #fbb03b;
+    stroke: #fbb03b;
+  }
+  body .screen-container .header .menu {
+    max-width: 72rem;
+    width: 100%;
+    padding: 20px 2rem 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  body .screen-container .header .menu {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding: 10px 2rem;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  body .screen-container .header .menu {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    padding: 10px 2rem;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (min-width: calc(1400px + .01px)) {
+  body .screen-container .header .menu {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     padding: 10px 2rem;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
-  .screen-container .content .header .menu {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    padding: 10px 2rem;
+  body .screen-container .header .menu .logo .logo-svg {
+    fill: #fff;
+    width: 100px;
+    transition: 0.3s;
+    stroke: #fff;
+  }
+  body .screen-container .header .menu .logo .logo-svg .line {
+    stroke-width: 20px;
   }
 }
-.screen-container .content .header .menu .logo .logo-svg {
-  fill: #fff;
-  width: 100px;
-  transition: 0.3s;
-  stroke: #fff;
+@media screen and (min-width: calc(1400px + .01px)) {
+  body .screen-container .header .menu .hamburger-menu {
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #eee 1px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  body .screen-container .header .menu .hamburger-menu:hover {
+    transform: scale(1.05);
+  }
+  body .screen-container .header .menu .hamburger-menu .bar {
+    width: 1.9rem;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #eee;
+    transition: 0.5s;
+    position: relative;
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::before, body .screen-container .header .menu .hamburger-menu .bar::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #eee;
+    transition: 0.3s;
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::before {
+    transform: translateY(-9px);
+  }
+  body .screen-container .header .menu .hamburger-menu .bar::after {
+    transform: translateY(9px);
+  }
 }
-.screen-container .content .header .menu .logo .logo-svg .line {
-  stroke-width: 20px;
-}
-.screen-container .content .header .menu .hamburger-menu {
-  height: 3.5rem;
-  width: 3.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid #eee 1px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-.screen-container .content .header .menu .hamburger-menu:hover {
-  transform: scale(1.05);
-}
-.screen-container .content .header .menu .hamburger-menu .bar {
-  width: 1.9rem;
-  height: 1.5px;
-  border-radius: 2px;
-  background-color: #eee;
-  transition: 0.5s;
-  position: relative;
-}
-.screen-container .content .header .menu .hamburger-menu .bar::before, .screen-container .content .header .menu .hamburger-menu .bar::after {
-  content: "";
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-color: #eee;
-  transition: 0.3s;
-}
-.screen-container .content .header .menu .hamburger-menu .bar::before {
-  transform: translateY(-9px);
-}
-.screen-container .content .header .menu .hamburger-menu .bar::after {
-  transform: translateY(9px);
-}
-
-.screen-container.active .content .header {
-  color: #000;
-}
-.screen-container.active .content .header .menu .logo .logo-svg {
-  fill: #14171c;
-  stroke: #14171c;
-}
-.screen-container.active .content .header .menu .hamburger-menu {
-  border-color: #14171c;
-}
-.screen-container.active .content .header .menu .hamburger-menu .bar,
-.screen-container.active .content .header .menu .hamburger-menu .bar::before,
-.screen-container.active .content .header .menu .hamburger-menu .bar::after {
-  background-color: #14171c;
-}
-.screen-container.active .content .header .menu .hamburger-menu .bar {
-  transform: rotate(360deg);
-  background-color: transparent;
-}
-.screen-container.active .content .header .menu .hamburger-menu .bar::before {
-  transform: rotate(45deg) translateY(0);
-}
-.screen-container.active .content .header .menu .hamburger-menu .bar::after {
-  transform: rotate(-45deg) translateY(0);
+@media screen and (min-width: calc(1400px + .01px)) {
+  body .screen-container.active .header {
+    color: #000;
+  }
+  body .screen-container.active .header .menu .logo .logo-svg {
+    fill: #14171c;
+    stroke: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu {
+    border-color: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar,
+body .screen-container.active .header .menu .hamburger-menu .bar::before,
+body .screen-container.active .header .menu .hamburger-menu .bar::after {
+    background-color: #14171c;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar::before {
+    transform: rotate(45deg) translateY(0);
+  }
+  body .screen-container.active .header .menu .hamburger-menu .bar::after {
+    transform: rotate(-45deg) translateY(0);
+  }
 }
 
 .footer {

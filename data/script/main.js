@@ -38,24 +38,28 @@ $(document).ready(function() {
   const nav_who = document.getElementById('nav-who');
   const nav_contact = document.getElementById('nav-contact');
 
+  const go_to_top = document.getElementById('go-to-top');
+  const go_to_top_height = go_to_top.getBoundingClientRect().height;
+
+  go_to_top.style.top = window.pageYOffset + window.innerHeight - go_to_top_height - 105 + 'px';
+
   window.onscroll = function() {
     let windowY = window.pageYOffset;
     let windowY_bottom = windowY + window.innerHeight;
 
     mobile_navbar.style.top = windowY_bottom - mobile_navbar_height + 'px';
 
+    go_to_top.style.top = windowY_bottom - go_to_top_height - 105 + 'px';
+
     let contentY = document.getElementById("page-content").getBoundingClientRect().top + windowY;
     let header_scroll = header_height + windowY;
     header.style.top = windowY + "px";
-    if (windowY >= 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
     if (header_scroll >= contentY) {
-      header.classList.add('desktop-scrolled');
+      header.classList.add('scrolled');
+      go_to_top.style.opacity = 1;
     } else {
-      header.classList.remove('desktop-scrolled');
+      go_to_top.style.opacity = 0;
+      header.classList.remove('scrolled');
     }
 
 
@@ -110,7 +114,7 @@ $(document).ready(function() {
     $("html, body").animate({
       scrollTop: $("body").offset().top - header_height
     }, 1000);
-    header.classList.remove('scrolled', 'desktop-scrolled');
+    header.classList.remove('scrolled');
   };
    
   hamburger_menu.addEventListener("click", () => {

@@ -1,15 +1,22 @@
-.screen-container {
-  .content {
-    position: relative;
-    .header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 30;
-      color: $white;
-      // transition: background .1s;
-      @include mobile {
+body {
+  .screen-container {
+    .content {
+      .header {
+        display: none;
+      }
+    }
+  }
+  @include media (tablet-portrait, tablet-landscape, laptop, desktop) {
+    .screen-container {
+      .header {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 30;
+        color: $white;
+        // transition: background .1s;
         &.scrolled {
           background-color: $secondaryColor;
           // transition: background .1s;
@@ -24,118 +31,100 @@
             }
           }
         }
-      }
-      @include media (tablet-portrait, tablet-landscape, laptop, desktop) {
-        &.desktop-scrolled {
-          background-color: $secondaryColor;
-          // transition: background .1s;
-          .menu {
-            .logo {
-              .logo-svg {
-                .inner, .line {
-                  fill: $primaryColor;
-                  stroke: $primaryColor;
-                }
+        .menu {
+          max-width: 72rem;
+          width: 100%;
+          padding: 20px 2rem 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin: auto;
+          @include media(tablet-landscape, laptop, desktop) {
+            padding: 10px 2rem;
+          }
+          .logo {
+            .logo-svg {
+              fill: $white;
+              width: 100px;
+              transition: 0.3s;
+              stroke: $white;
+              .line {
+                stroke-width: 20px;
+              }
+            }
+          }
+          .hamburger-menu {
+            height: 3.5rem;
+            width: 3.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid #eee 1px;
+            border-radius: 5px;
+            transition: 0.3s;
+            &:hover {
+              transform: scale(1.05);
+            }
+            .bar {
+              width: 1.9rem;
+              height: 1.5px;
+              border-radius: 2px;
+              background-color: #eee;
+              transition: 0.5s;
+              position: relative;
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                background-color: #eee;
+                transition: 0.3s;
+              }
+              &::before {
+                transform: translateY(-9px);
+              }
+              &::after {
+                transform: translateY(9px);
               }
             }
           }
         }
       }
-      .menu {
-        max-width: 72rem;
-        width: 100%;
-        padding: 20px 2rem 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        @include media(tablet-landscape, laptop, desktop) {
-          padding: 10px 2rem;
-        }
-        .logo {
-          .logo-svg {
-            fill: $white;
-            width: 100px;
-            transition: 0.3s;
-            stroke: $white;
-            .line {
-              stroke-width: 20px;
+      &.active {
+        .header {
+          color: $black;
+          .menu {
+            .logo {
+              .logo-svg {
+                fill: $secondaryColor;
+                stroke: $secondaryColor;
+              }
+            }
+            .hamburger-menu {
+              border-color: $secondaryColor;
+              .bar,
+              .bar::before,
+              .bar::after {
+                background-color: $secondaryColor;
+              }
+              .bar {
+                transform: rotate(360deg);
+                background-color: transparent;
+                &::before {
+                  transform: rotate(45deg) translateY(0);
+                }
+                &::after {
+                  transform: rotate(-45deg) translateY(0);
+                }
+              }
             }
           }
-        }
-        .hamburger-menu {
-          height: 3.5rem;
-          width: 3.5rem;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: solid #eee 1px;
-          border-radius: 5px;
-          transition: 0.3s;
-          &:hover {
-            transform: scale(1.05);
-          }
-          .bar {
-            width: 1.9rem;
-            height: 1.5px;
-            border-radius: 2px;
-            background-color: #eee;
-            transition: 0.5s;
-            position: relative;
-            &::before,
-            &::after {
-              content: "";
-              position: absolute;
-              width: inherit;
-              height: inherit;
-              background-color: #eee;
-              transition: 0.3s;
-            }
-            &::before {
-              transform: translateY(-9px);
-            }
-            &::after {
-              transform: translateY(9px);
-            }
-          }
-        }
-      }
+        } 
+      } 
     }
-  }
-}
-
-.screen-container.active {
-  .content {
-    .header {
-      color: $black;
-      .menu {
-        .logo {
-          .logo-svg {
-            fill: $secondaryColor;
-            stroke: $secondaryColor;
-          }
-        }
-        .hamburger-menu {
-          border-color: $secondaryColor;
-          .bar,
-          .bar::before,
-          .bar::after {
-            background-color: $secondaryColor;
-          }
-          .bar {
-            transform: rotate(360deg);
-            background-color: transparent;
-            &::before {
-              transform: rotate(45deg) translateY(0);
-            }
-            &::after {
-              transform: rotate(-45deg) translateY(0);
-            }
-          }
-        }
-      }
-    } 
+  
   }
 }
