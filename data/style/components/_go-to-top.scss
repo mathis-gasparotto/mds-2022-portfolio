@@ -1,13 +1,16 @@
 .screen-container {
   .go-to-top {
-    position: absolute;
+    position: fixed;
     right: 3%;
-    top: 0;
     z-index: 99;
     opacity: 0;
+    @include mobile {
+      top: unset !important;
+      bottom: 105px;
+    }
     @include responsive-transition;
     @include media (tablet-landscape, laptop, desktop) {
-      margin-top: 80px;
+      top: 0;
       right: 2%;
     }
     .go-to-top-link {

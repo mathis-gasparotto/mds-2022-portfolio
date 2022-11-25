@@ -9,7 +9,7 @@ $(document).ready(function() {
   const main = document.querySelector(".main .page");
 
 
-  mobile_navbar.style.top = window.pageYOffset + window.innerHeight - mobile_navbar_height + 'px';
+  // mobile_navbar.style.top = window.pageYOffset + window.innerHeight - mobile_navbar_height + 'px';
 
   main.style.paddingBottom = mobile_navbar_height + 'px';
 
@@ -41,15 +41,12 @@ $(document).ready(function() {
   const go_to_top = document.getElementById('go-to-top');
   const go_to_top_height = go_to_top.getBoundingClientRect().height;
 
-  go_to_top.style.top = window.pageYOffset + window.innerHeight - go_to_top_height - 105 + 'px';
+  go_to_top.style.top = window.pageYOffset + window.innerHeight - go_to_top_height - 30 + 'px';
 
   window.onscroll = function() {
     let windowY = window.pageYOffset;
-    let windowY_bottom = windowY + window.innerHeight;
 
-    mobile_navbar.style.top = windowY_bottom - mobile_navbar_height + 'px';
-
-    go_to_top.style.top = windowY_bottom - go_to_top_height - 105 + 'px';
+    go_to_top.style.top = windowY + window.innerHeight - go_to_top_height - 30 + 'px';
 
     let contentY = document.getElementById("page-content").getBoundingClientRect().top + windowY;
     let header_scroll = header_height + windowY;

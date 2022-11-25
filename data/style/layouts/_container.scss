@@ -4,9 +4,11 @@
     width: 100%;
     left: 0;
     z-index: 20;
-    transform-origin: left;
-    transform-style: preserve-3d;
     transition: 0.5s;
+    @include media (tablet-landscape, laptop, desktop) {
+      transform-origin: left;
+      transform-style: preserve-3d;
+    }
   }
 }
 
@@ -16,7 +18,9 @@
   background-color: $primaryColor;
   background-image: linear-gradient(135deg, #ffc524 0%, #d88220 74%);
   overflow-x: hidden;
-  transform-style: preserve-3d;
+  @include media (tablet-landscape, laptop, desktop) {
+    transform-style: preserve-3d;
+  }
   .content {
     position: relative;
   }
