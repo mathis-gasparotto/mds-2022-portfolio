@@ -6,7 +6,7 @@ body {
       }
     }
   }
-  @include media (tablet-portrait, tablet-landscape, laptop, desktop) {
+  @include media (tablet-landscape, laptop, desktop) {
     .screen-container {
       .header {
         display: block !important;
