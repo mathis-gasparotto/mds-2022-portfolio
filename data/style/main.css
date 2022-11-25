@@ -1413,6 +1413,9 @@ body::-webkit-scrollbar-thumb {
   display: block;
   fill: #14171c;
 }
+.screen-container .go-to-top:hover {
+  transform: translateY(-7px);
+}
 .screen-container.active .go-to-top {
   display: none;
 }

@@ -21,6 +21,9 @@
         fill: $secondaryColor;
       }
     }
+    &:hover {
+      transform: translateY(-7px);
+    }
   }
 
   &.active {
