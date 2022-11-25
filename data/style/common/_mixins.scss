@@ -43,7 +43,7 @@
 
 
 @mixin media($keys...){
-  @each $key in $keys { 
+  @each $key in $keys {
     @if ($key == 'mobile') {
       @include mobile {
         @content

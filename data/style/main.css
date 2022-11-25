@@ -592,6 +592,10 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -973,18 +977,96 @@ body::-webkit-scrollbar-thumb {
 .section.projects {
   background-color: #ededed;
 }
-@media screen and (max-width: 767px) {
+.section.projects .container:not(.projects-show-more) {
+  gap: 70px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .container:not(.projects-show-more) {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    gap: 70px;
-    padding-bottom: 50px;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container:not(.projects-show-more) {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container:not(.projects-show-more) {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container:not(.projects-show-more) {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    gap: 0;
+    padding-bottom: 0;
   }
 }
 .section.projects .container {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+}
+.section.projects .container .section-title {
+  text-align: center;
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .section-title {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .section-title {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    display: none;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .section-title {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    display: none;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .section-title {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
 }
 .section.projects .container .project-container {
   display: flex;
@@ -1029,67 +1111,74 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .section.projects .container .project-container .img-container {
-  width: 100%;
+  width: 90%;
+  margin: auto;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .container .project-container .img-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 50%;
+    width: 35%;
+    margin: 0;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .container .project-container .img-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 50%;
+    width: 35%;
+    margin: 0;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .container .project-container .img-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 50%;
+    width: 35%;
+    margin: 0;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .container .project-container .img-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 50%;
+    width: 35%;
+    margin: 0;
   }
+}
+.section.projects .container .project-container .img-container .title {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 1.5em;
 }
 .section.projects .container .project-container .img-container .img {
   width: 100%;
   margin-bottom: -7px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 300px;
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .container .project-container .img-container .img {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 430px;
+    height: 500px;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .container .project-container .img-container .img {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 400px;
+    height: 450px;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .container .project-container .img-container .img {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 380px;
+    height: 430px;
   }
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .container .project-container .img-container .img {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 360px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .section.projects .container .project-container .img-container .img {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 220px;
+    height: 380px;
   }
 }
 .section.projects .container .project-container .text-container {
@@ -1102,28 +1191,28 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .container .project-container .text-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    max-width: 40%;
+    max-width: 55%;
     text-align: left;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.projects .container .project-container .text-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    max-width: 40%;
+    max-width: 55%;
     text-align: left;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.projects .container .project-container .text-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    max-width: 40%;
+    max-width: 55%;
     text-align: left;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.projects .container .project-container .text-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    max-width: 40%;
+    max-width: 55%;
     text-align: left;
   }
 }
@@ -1136,9 +1225,32 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-evenly;
   align-items: center;
   gap: 10px;
-  width: inherit;
   background-color: #fbb03b;
   padding: 15px 0;
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .projects-show-more {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: inherit;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .projects-show-more {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: inherit;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .projects-show-more {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: inherit;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .projects-show-more {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: inherit;
+  }
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.projects .projects-show-more {
