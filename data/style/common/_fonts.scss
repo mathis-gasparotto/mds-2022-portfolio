@@ -1,13 +1,13 @@
 $poppins: (
-  100: '/data/fonts/Poppins-Thin.ttf',
-  200: '/data/fonts/Poppins-ExtraLight.ttf',
-  300: '/data/fonts/Poppins-Light.ttf',
-  400: '/data/fonts/Poppins-Regular.ttf',
-  500: '/data/fonts/Poppins-Medium.ttf',
-  600: '/data/fonts/Poppins-SemiBold.ttf',
-  700: '/data/fonts/Poppins-Bold.ttf',
-  800: '/data/fonts/Poppins-ExtraBold.ttf',
-  900: '/data/fonts/Poppins-Black.ttf',
+  100: $internalLinkPrefix + 'data/fonts/Poppins-Thin.ttf',
+  200: $internalLinkPrefix + 'data/fonts/Poppins-ExtraLight.ttf',
+  300: $internalLinkPrefix + 'data/fonts/Poppins-Light.ttf',
+  400: $internalLinkPrefix + 'data/fonts/Poppins-Regular.ttf',
+  500: $internalLinkPrefix + 'data/fonts/Poppins-Medium.ttf',
+  600: $internalLinkPrefix + 'data/fonts/Poppins-SemiBold.ttf',
+  700: $internalLinkPrefix + 'data/fonts/Poppins-Bold.ttf',
+  800: $internalLinkPrefix + 'data/fonts/Poppins-ExtraBold.ttf',
+  900: $internalLinkPrefix + 'data/fonts/Poppins-Black.ttf',
 );
 
 @each $weight,
