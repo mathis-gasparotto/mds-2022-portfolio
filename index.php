@@ -1,3 +1,60 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+
+require '/modules/PHPMailer/src/PHPMailer.php';
+
+$phpmailer = new PHPMailer();
+$phpmailer->setLanguage('fr');
+$phpmailer->CharSet = 'UTF-8';
+
+$errors = [];
+if (!empty($_POST)) {
+  $lname = $_POST['lname'];
+  $fname = $_POST['fname'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  if (empty($lname)) {
+    $errors['lname'] = 'Le nom est requis';
+  }
+  if (empty($fname)) {
+    $errors['fname'] = 'Le prénom est requis';
+  }
+  if (empty($email)) {
+    $errors['email'] = 'L\'adresse mail est requis';
+  } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors['email'] = 'L\'adresse mail est invalide';
+  }
+  if (empty($message)) {
+    $errors['message'] = 'Un message est requis';
+  }
+  if (empty($errors)) {
+    
+    $phpmailer->From       = trim($_POST["email"]);
+    $phpmailer->FromName   = trim($_POST["fname"]) . " " . trim($_POST["lname"]);
+    
+    $phpmailer->AddAddress('mathis.gasparotto@hotmail.com', 'Mathis Gasparotto');
+    
+    $phpmailer->Subject    =  "Nouveau message de " . trim($_POST["fname"]) . " " . trim($_POST["lname"]) . " (from mathisgasparotto.fr)";
+    $phpmailer->WordWrap   = 50;
+    $phpmailer->IsHTML(true);
+    $phpmailer->MsgHTML('
+    <div><b>Nom : </b>'.$_POST["lname"].'</div>
+    <div><b>Prénom : </b>'.$_POST["fname"].'</div>
+    <div><b>Email : </b><a href="mailto:'.$_POST["email"].'">'.$_POST["email"].'</a></div>
+    <div><b>Message :</b></div>
+    <div><p style="margin:0;">'.$_POST["message"].'</p></div>
+    ');
+    $phpmailer->AltBody = $_POST["message"];
+    
+    if (!$phpmailer->send()) {
+      $sendError = $phpmailer->ErrorInfo;
+    } else{
+      $sendSuccess = 'Message bien envoyé';
+    }
+  }
+} ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,10 +62,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="data/style/main.css">
+  <link rel="stylesheet" type="text/css" href="/data/style/main.css">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;800;900&display=swap" /> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-  <link rel="shortcut icon" href="data/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/data/img/favicon.ico" type="image/x-icon">
 
   <title>Développeur Web - Mathis GASPAROTTO</title>
 
@@ -71,7 +128,7 @@
                         <h1 class="title"><span>Développeur</span> Web</h1>
                         <h2 class="subtitle">Mathis <span>GASPAROTTO</span></h2>
                         <div class="btns">
-                          <a href="data/downloads/CV_DeveloppeurWeb_MathisGasparotto_RVB.pdf" class="btn btn-dl btn_with_icon btn-secondary cv-dl-btn left" download="CV_DeveloppeurWeb_MathisGasparotto_RVB.pdf">
+                          <a href="/data/downloads/CV_DeveloppeurWeb_MathisGasparotto_RVB.pdf" class="btn btn-dl btn_with_icon btn-secondary cv-dl-btn left" download="CV_DeveloppeurWeb_MathisGasparotto_RVB.pdf">
                             <i class="fa fa-dl"></i>
                             <span class="content">Télécharger mon CV</span>
                           </a>
@@ -136,7 +193,7 @@
                       <h2 class="section-title">Mes projets</h2>
                       <div class="project-container">
                         <div class="img-container">
-                          <img src="data/img/site-personnel-mathis-gasparotto-developpeur-projet.jpg" class="img" alt="site-personnel-mathis-gasparotto-developpeur-projet" title="Image de mon projet personnel" loading="lazy">
+                          <img src="/data/img/site-personnel-mathis-gasparotto-developpeur-projet.jpg" class="img" alt="site-personnel-mathis-gasparotto-developpeur-projet" title="Image de mon projet personnel" loading="lazy">
                           <h3 class="title">Site personnel</h3>
                         </div>
                         <div class="text-container">
@@ -146,7 +203,7 @@
                       </div>
                       <div class="project-container">
                         <div class="img-container">
-                          <img src="data/img/generator-de-facture-laravel-mathis-gasparotto-developpeur-projet.jpg" class="img" alt="generator-de-facture-laravel-mathis-gasparotto-developpeur-projet" title="Image du projet du générateur de facture sous Laravel" loading="lazy">
+                          <img src="/data/img/generator-de-facture-laravel-mathis-gasparotto-developpeur-projet.jpg" class="img" alt="generator-de-facture-laravel-mathis-gasparotto-developpeur-projet" title="Image du projet du générateur de facture sous Laravel" loading="lazy">
                           <h3 class="title">Générateur de facture</h3>
                         </div>
                         <div class="text-container">
@@ -156,7 +213,7 @@
                       </div>
                       <div class="project-container">
                         <div class="img-container">
-                          <img src="data/img/plateforme-de-vote-mathis-gasparotto-web-developpeur-laravel-projet.jpg" class="img" alt="plateforme-de-vote-mathis-gasparotto-web-developpeur-laravel-projet" title="Image du projet de plateforme de vote sous Laravel" loading="lazy">
+                          <img src="/data/img/plateforme-de-vote-mathis-gasparotto-web-developpeur-laravel-projet.jpg" class="img" alt="plateforme-de-vote-mathis-gasparotto-web-developpeur-laravel-projet" title="Image du projet de plateforme de vote sous Laravel" loading="lazy">
                           <h3 class="title">Plateforme de vote</h3>
                         </div>
                         <div class="text-container">
@@ -177,7 +234,7 @@
                   <section class="section who bg-secondary cl-white" id="who">
                     <div class="container">
                       <div class="left img-container">
-                        <img src="data/img/mathis_gasparotto_developpeur_web.jpg" alt="mathis_gasparotto_developpeur_web" title="Mathis Gasparotto - Développeur Web" loading="lazy" class="img">
+                        <img src="/data/img/mathis_gasparotto_developpeur_web.jpg" alt="mathis_gasparotto_developpeur_web" title="Mathis Gasparotto - Développeur Web" loading="lazy" class="img">
                       </div>
                       <div class="right content-container">
                         <h2 class="title">Qui suis-je ?</h2>
@@ -225,24 +282,42 @@
                         <h2 class="title">Envoyez-moi un message</h2>
                       </div>
                       <div class="form-container">
-                        <form method="POST" class="form" action="/contact/">
-                          <div class="input-container">
-                            <label for="lname" class="required">Nom</label>
-                            <input type="text" id="lname" name="lname" placeholder="Votre nom">
-                          </div>
-                          <div class="input-container">
-                            <label for="fname" class="required">Prénom</label>
-                            <input type="text" id="fname" name="fname" placeholder="Votre prénom">
-                          </div>
-                          <div class="input-container">
-                            <label for="email" class="required">Email</label>
-                            <input type="text" id="email" name="email" placeholder="Adresse Email">
-                          </div>
-                          <div class="input-container">
-                            <label for="message" class="required">Message</label>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Indiquez votre message ici"></textarea>
-                          </div>
-                          <input type="submit" class="btn btn-primary" value="Envoyer">
+                        <form method="POST" class="form" action="/">
+                        <?php if (isset($sendSuccess) && $sendSuccess) { ?>
+                          <div class="alert alert-success send-info"><?php echo $sendSuccess; ?></div>
+                        <?php } ?>
+                        <?php if (isset($sendError) && $sendError) { ?>
+                          <div class="alert alert-danger send-infos"><?php echo $sendError; ?></div>
+                        <?php } ?>
+                        <div class="input-container">
+                          <label for="lname" class="required">Nom</label>
+                          <input class="<?php echo((!empty($errors['lname'])) ? 'is-invalid' : '') ?>" type="text" id="lname" name="lname" placeholder="Votre nom" />
+                          <?php if(isset($errors['lname'])){ ?>
+                            <div class="invalid-feedback"><?php echo $errors['lname']; ?></div>
+                          <?php } ?>
+                        </div>
+                        <div class="input-container">
+                          <label for="fname" class="required">Prénom</label>
+                          <input class="<?php echo((!empty($errors['fname'])) ? 'is-invalid' : '') ?>" type="text" id="fname" name="fname" placeholder="Votre prénom" />
+                          <?php if(isset($errors['fname'])){ ?>
+                            <div class="invalid-feedback"><?php echo $errors['fname']; ?></div>
+                          <?php } ?>
+                        </div>
+                        <div class="input-container">
+                          <label for="email" class="required">Email</label>
+                          <input class="<?php echo((!empty($errors['email'])) ? 'is-invalid' : '') ?>" type="text" id="email" name="email" placeholder="Adresse Email" />
+                          <?php if(isset($errors['email'])){ ?>
+                            <div class="invalid-feedback"><?php echo $errors['email']; ?></div>
+                          <?php } ?>
+                        </div>
+                        <div class="input-container">
+                          <label for="message" class="required">Message</label>
+                          <textarea class="<?php echo((!empty($errors['message'])) ? 'is-invalid' : '') ?>" name="message" id="message" cols="30" rows="10" placeholder="Indiquez votre message ici"></textarea>
+                          <?php if(isset($errors['message'])){ ?>
+                            <div class="invalid-feedback"><?php echo $errors['message']; ?></div>
+                          <?php } ?>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Envoyer" />
                         </form>
                       </div>
                     </div>
@@ -250,7 +325,7 @@
                   <section class="section cta bg-secondary" id="cta">
                     <div class="container">
                       <h2 class="title cl-white">Sinon, vous pouvez toujours télécharger mon CV 😉</h2>
-                      <a href="data/downloads/CV_DeveloppeurWeb_MathisGasparotto_RVB.pdf" class="btn btn-dl btn_with_icon btn-primary cv-dl-btn left" download="CV_DeveloppeurWeb_MathisGasparotto_RVB.pdf">
+                      <a href="/data/downloads/CV_DeveloppeurWeb_MathisGasparotto_RVB.pdf" class="btn btn-dl btn_with_icon btn-primary cv-dl-btn left" download="CV_DeveloppeurWeb_MathisGasparotto_RVB.pdf">
                         <i class="fa fa-dl"></i>
                         <span class="content">Télécharger mon CV</span>
                       </a>
@@ -347,8 +422,8 @@
             </a>
           </div>
           <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-          <script src="data/script/jquery.min.js"></script>
-          <script src="data/script/main.js"></script>
+          <script src="/data/script/jquery.min.js"></script>
+          <script src="/data/script/main.js"></script>
         </div>
       </div>
     </body>
