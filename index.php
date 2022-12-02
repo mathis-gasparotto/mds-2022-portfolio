@@ -1,7 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 
-require '/modules/PHPMailer/src/PHPMailer.php';
+require 'modules/PHPMailer/src/PHPMailer.php';
 
 $phpmailer = new PHPMailer();
 $phpmailer->setLanguage('fr');
