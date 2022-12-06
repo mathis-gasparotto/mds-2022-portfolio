@@ -28,14 +28,11 @@ if (!empty($_POST)) {
     $errors['message'] = 'Un message est requis';
   }
   if (empty($errors)) {
-    
-    $phpmailer->From       = trim($_POST["email"]);
-    $phpmailer->FromName   = trim($_POST["fname"]) . " " . trim($_POST["lname"]);
-    
+    $phpmailer->From = trim($_POST["email"]);
+    $phpmailer->FromName = trim($_POST["fname"]) . " " . trim($_POST["lname"]);
     $phpmailer->AddAddress('mathis.gasparotto@hotmail.com', 'Mathis Gasparotto');
-    
-    $phpmailer->Subject    =  "Nouveau message de " . trim($_POST["fname"]) . " " . trim($_POST["lname"]) . " (from mathisgasparotto.fr)";
-    $phpmailer->WordWrap   = 50;
+    $phpmailer->Subject =  "Nouveau message de " . trim($_POST["fname"]) . " " . trim($_POST["lname"]) . " (from mathisgasparotto.fr)";
+    $phpmailer->WordWrap = 50;
     $phpmailer->IsHTML(true);
     $phpmailer->MsgHTML('
     <div><b>Nom : </b>'.$_POST["lname"].'</div>
@@ -45,7 +42,6 @@ if (!empty($_POST)) {
     <div><p style="margin:0;">'.$_POST["message"].'</p></div>
     ');
     $phpmailer->AltBody = $_POST["message"];
-    
     if (!$phpmailer->send()) {
       $sendError = $phpmailer->ErrorInfo;
     } else{
