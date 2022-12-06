@@ -421,6 +421,11 @@ if (!empty($_POST)) {
           <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
           <script src="/data/script/jquery.min.js"></script>
           <script src="/data/script/main.js"></script>
+          <script>
+            if ( window.history.replaceState ) {
+              window.history.replaceState( null, null, window.location.href );
+            }
+          </script>
         </div>
       </div>
     </body>
