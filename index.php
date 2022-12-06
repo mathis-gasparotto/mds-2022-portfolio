@@ -282,7 +282,7 @@ if (!empty($_POST)) {
                         <h2 class="title">Envoyez-moi un message</h2>
                       </div>
                       <div class="form-container">
-                        <form method="POST" class="form" action="/">
+                        <form method="POST" class="form" action="/#contact-form">
                         <?php if (isset($sendSuccess) && $sendSuccess) { ?>
                           <div class="alert alert-success send-info"><?php echo $sendSuccess; ?></div>
                         <?php } ?>
