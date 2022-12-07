@@ -1,0 +1,42 @@
+body.loading {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  .screen-container {
+    display: none;
+  }
+  .loading-screen {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    @include loading-screen-transition;
+  }
+}
+
+.loading-screen {
+  opacity: 0;
+  @include loading-screen-transition;
+  background-color: $secondaryColor;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .dot {
+      width: 20px;
+      height: 20px;
+      background-color: $primaryColor;
+      border-radius: 50%;
+      animation: loading 2s ease-in-out var(--animation-delay) infinite;
+      transition: .5s ease-in-out;
+    }
+  }
+}

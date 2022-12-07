@@ -162,3 +162,19 @@
     @include main-transform(40px);
   }
 }
+
+
+
+// ----------- Loading Screen Dots animation ----------- //
+
+@keyframes loading {
+  0% {
+    transform: translateY(0px);
+  }
+  12% {
+    transform: translateY(-20px);
+  }
+  24% {
+    transform: translateY(0px);
+  }
+}

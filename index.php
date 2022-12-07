@@ -66,13 +66,21 @@ if (!empty($_POST)) {
   <title>Développeur Web - Mathis GASPAROTTO</title>
 </head>
 
-<body id="index">
+<body id="index body" class="loading">
+  <div class="loading-screen">
+    <div class="dots">
+      <span class="dot" style="--animation-delay: 0s"></span>
+      <span class="dot" style="--animation-delay: .4s"></span>
+      <span class="dot" style="--animation-delay: .8s"></span>
+      <span class="dot" style="--animation-delay: 1.2s"></span>
+    </div>
+  </div>
   <div class="screen-container">
     <div class="content">
       <header class="header" id="header">
         <div class="menu">
           <div class="logo">
-            <a href="#top" class="home_link scroll-to-top changing-page-link">
+            <a href="#top" class="home_link scroll-to-top">
               <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 650.26">
               <g>
                 <g>

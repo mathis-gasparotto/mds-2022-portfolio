@@ -85,6 +85,14 @@
   transition: box-shadow .2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@mixin slow-transition {
+  transition: all 2s ease-in-out;
+}
+
+@mixin loading-screen-transition {
+  transition: all 1s ease-in-out .1s, height 0s 1.1s, width 0s 1.1s;
+}
+
 // ------------------------- Fonts -------------------------
 @mixin h1 {
   font-size: $fsH1;
