@@ -396,31 +396,45 @@ h6 {
   font-weight: 300;
 }
 
-.h1-style {
+.h1 {
   font-size: 4em;
+  display: block;
+  font-weight: bold;
 }
 
-.h2-style {
+.h2 {
   font-size: 3em;
+  display: block;
+  font-weight: bold;
+  display: block;
+  font-weight: bold;
 }
 
-.h3-style {
+.h3 {
   font-size: 2.5em;
+  display: block;
+  font-weight: bold;
 }
 
-.h4-style {
+.h4 {
   font-size: 2em;
+  display: block;
+  font-weight: bold;
 }
 
-.h5-style {
+.h5 {
   font-size: 1.5em;
+  display: block;
+  font-weight: bold;
 }
 
-.h6-style {
+.h6 {
   font-size: 1.2em;
+  display: block;
+  font-weight: bold;
 }
 
-.text-style {
+.text {
   font-size: 1em;
 }
 
@@ -594,6 +608,10 @@ body::-webkit-scrollbar-thumb {
 
 .text-center {
   text-align: center;
+}
+
+.d-none {
+  display: none;
 }
 
 .form {
@@ -1453,34 +1471,36 @@ body::-webkit-scrollbar-thumb {
 .section.coordinates .container {
   font-style: normal;
   margin: auto;
+}
+.section.coordinates .container .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .section.coordinates .container {
+  .section.coordinates .container .wrapper {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .section.coordinates .container {
+  .section.coordinates .container .wrapper {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .section.coordinates .container {
+  .section.coordinates .container .wrapper {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
-  .section.coordinates .container {
+  .section.coordinates .container .wrapper {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     flex-direction: row;
     gap: 0;
@@ -2773,6 +2793,7 @@ body .screen-container.active .header .menu .hamburger-menu .bar::after {
   text-align: center;
   padding: 5px 0;
   line-height: 1;
+  border-top: solid 1px #2f2f2f;
 }
 
 .section.maintenance {

@@ -2,13 +2,15 @@
   .container {
     font-style: normal;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
-      flex-direction: row;
-      gap: 0;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+        flex-direction: row;
+        gap: 0;
+      }
     }
     .single-coordinate {
       text-align: center;

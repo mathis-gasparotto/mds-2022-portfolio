@@ -73,30 +73,38 @@ h6 {
   font-weight: $fwLight;
 }
 
-.h1-style {
+.h1 {
   font-size: $fsH1;
+  @include h-template;
 }
 
-.h2-style {
+.h2 {
   font-size: $fsH2;
+  display: block;
+  font-weight: bold;
+  @include h-template;
 }
 
-.h3-style {
+.h3 {
   font-size: $fsH3;
+  @include h-template;
 }
 
-.h4-style {
+.h4 {
   font-size: $fsH4;
+  @include h-template;
 }
 
-.h5-style {
+.h5 {
   font-size: $fsH5;
+  @include h-template;
 }
 
-.h6-style {
+.h6 {
   font-size: $fsH6;
+  @include h-template;
 }
 
-.text-style {
+.text {
   font-size: $fsText;
 }
