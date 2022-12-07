@@ -1017,41 +1017,619 @@ body::-webkit-scrollbar-thumb {
 .section.projects {
   background-color: #ededed;
 }
-.section.projects .container:not(.projects-show-more) {
+.section.projects .container {
+  display: flex;
+  flex-direction: column;
+}
+.section.projects .container .projects-container {
   gap: 70px;
   padding-bottom: 50px;
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .section.projects .container:not(.projects-show-more) {
+  .section.projects .container .projects-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     gap: 0;
     padding-bottom: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .section.projects .container:not(.projects-show-more) {
+  .section.projects .container .projects-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     gap: 0;
     padding-bottom: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .section.projects .container:not(.projects-show-more) {
+  .section.projects .container .projects-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     gap: 0;
     padding-bottom: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
-  .section.projects .container:not(.projects-show-more) {
+  .section.projects .container .projects-container {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     gap: 0;
     padding-bottom: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   }
 }
-.section.projects .container {
+.section.projects .container .projects-container .project-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    background-color: #fff;
+    border: solid 1px #ededed;
+    flex-direction: row;
+  }
+  .section.projects .container .projects-container .project-container:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .section.projects .container .projects-container .project-container .img-container {
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 430px;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 380px;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container:hover .img {
+    transform: scale(1.08);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container .title {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin-right: 30px;
+    font-size: 2em;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container .img {
+    transform: scale(1.01);
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+    filter: blur(1px) brightness(0.3);
+    width: 100%;
+    margin-bottom: -7px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    max-width: 90%;
+    margin: auto;
+    min-height: 100%;
+    padding: 2em 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container .content {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    background-color: #fff;
+    border: solid 1px #ededed;
+    flex-direction: row;
+  }
+  .section.projects .container .projects-container .project-container:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .section.projects .container .projects-container .project-container .img-container {
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 430px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 380px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container:hover .img {
+    transform: scale(1.08);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container .title {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin-right: 30px;
+    font-size: 2em;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container .img {
+    transform: scale(1.01);
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+    filter: blur(1px) brightness(0.3);
+    width: 100%;
+    margin-bottom: -7px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    max-width: 90%;
+    margin: auto;
+    min-height: 100%;
+    padding: 2em 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container .content {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    background-color: #fff;
+    border: solid 1px #ededed;
+    flex-direction: row;
+  }
+  .section.projects .container .projects-container .project-container:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .section.projects .container .projects-container .project-container .img-container {
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 430px;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 380px;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container:hover .img {
+    transform: scale(1.08);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container .title {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin-right: 30px;
+    font-size: 2em;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container .img {
+    transform: scale(1.01);
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+    filter: blur(1px) brightness(0.3);
+    width: 100%;
+    margin-bottom: -7px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    max-width: 90%;
+    margin: auto;
+    min-height: 100%;
+    padding: 2em 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container .content {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    background-color: #fff;
+    border: solid 1px #ededed;
+    flex-direction: row;
+  }
+  .section.projects .container .projects-container .project-container:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .section.projects .container .projects-container .project-container .img-container {
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 500px;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 450px;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 430px;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    height: 380px;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container:hover .img {
+    transform: scale(1.08);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container .title {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin-right: 30px;
+    font-size: 2em;
+    color: #fff;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .img-container .img {
+    transform: scale(1.01);
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+    filter: blur(1px) brightness(0.3);
+    width: 100%;
+    margin-bottom: -7px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    max-width: 90%;
+    margin: auto;
+    min-height: 100%;
+    padding: 2em 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container {
+    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    max-width: 55%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: calc(1400px + .01px)) {
+  .section.projects .container .projects-container .project-container .text-container .content {
+    margin-bottom: 20px;
+  }
 }
 .section.projects .container .section-title {
   text-align: center;
@@ -1079,209 +1657,6 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
     display: none;
   }
-}
-@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .section.projects .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .section.projects .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .section.projects .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-@media screen and (min-width: calc(1400px + .01px)) {
-  .section.projects .container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-.section.projects .container .project-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .section.projects .container .project-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    flex-direction: row;
-  }
-  .section.projects .container .project-container:nth-of-type(2n) {
-    flex-direction: row-reverse;
-  }
-  .section.projects .container .project-container:nth-of-type(2) {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .section.projects .container .project-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    flex-direction: row;
-  }
-  .section.projects .container .project-container:nth-of-type(2n) {
-    flex-direction: row-reverse;
-  }
-  .section.projects .container .project-container:nth-of-type(2) {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .section.projects .container .project-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    flex-direction: row;
-  }
-  .section.projects .container .project-container:nth-of-type(2n) {
-    flex-direction: row-reverse;
-  }
-  .section.projects .container .project-container:nth-of-type(2) {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-@media screen and (min-width: calc(1400px + .01px)) {
-  .section.projects .container .project-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    flex-direction: row;
-  }
-  .section.projects .container .project-container:nth-of-type(2n) {
-    flex-direction: row-reverse;
-  }
-  .section.projects .container .project-container:nth-of-type(2) {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-.section.projects .container .project-container .img-container {
-  width: 90%;
-  margin: auto;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow: hidden;
-  height: 300px;
-}
-@media screen and (min-width: calc(1400px + .01px)) {
-  .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 500px;
-  }
-}
-@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 450px;
-  }
-}
-@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 430px;
-  }
-}
-@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    height: 380px;
-  }
-}
-@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 35%;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 35%;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 35%;
-    margin: 0;
-  }
-}
-@media screen and (min-width: calc(1400px + .01px)) {
-  .section.projects .container .project-container .img-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 35%;
-    margin: 0;
-  }
-}
-.section.projects .container .project-container .img-container:hover .img {
-  transform: scale(1.08);
-  transition: transform 0.5s ease-in-out;
-}
-.section.projects .container .project-container .img-container .title {
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-  margin-right: 30px;
-  font-size: 2em;
-  color: #fff;
-}
-.section.projects .container .project-container .img-container .img {
-  transform: scale(1.01);
-  position: absolute;
-  transition: transform 0.5s ease-in-out;
-  filter: blur(1px) brightness(0.3);
-  width: 100%;
-  margin-bottom: -7px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-}
-.section.projects .container .project-container .text-container {
-  max-width: 90%;
-  margin: auto;
-  min-height: 100%;
-  padding: 2em 0;
-  text-align: center;
-}
-@media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .section.projects .container .project-container .text-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    max-width: 55%;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .section.projects .container .project-container .text-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    max-width: 55%;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .section.projects .container .project-container .text-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    max-width: 55%;
-    text-align: left;
-  }
-}
-@media screen and (min-width: calc(1400px + .01px)) {
-  .section.projects .container .project-container .text-container {
-    transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    max-width: 55%;
-    text-align: left;
-  }
-}
-.section.projects .container .project-container .text-container .content {
-  margin-bottom: 20px;
 }
 .section.projects .projects-show-more {
   display: flex;
@@ -1490,19 +1865,21 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 2rem;
 }
 
-.section.coordinates .container {
+.section.coordinates address {
   font-style: normal;
+}
+.section.coordinates .container {
   margin: auto;
 }
 .section.coordinates .container .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 20px;
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
   .section.coordinates .container .wrapper {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    justify-content: space-evenly;
     flex-direction: row;
     gap: 0;
   }
@@ -1510,6 +1887,7 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
   .section.coordinates .container .wrapper {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    justify-content: space-evenly;
     flex-direction: row;
     gap: 0;
   }
@@ -1517,6 +1895,7 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
   .section.coordinates .container .wrapper {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    justify-content: space-evenly;
     flex-direction: row;
     gap: 0;
   }
@@ -1524,11 +1903,12 @@ body::-webkit-scrollbar-thumb {
 @media screen and (min-width: calc(1400px + .01px)) {
   .section.coordinates .container .wrapper {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
+    justify-content: space-evenly;
     flex-direction: row;
     gap: 0;
   }
 }
-.section.coordinates .container .single-coordinate {
+.section.coordinates .container .wrapper .single-coordinate {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1539,30 +1919,30 @@ body::-webkit-scrollbar-thumb {
   gap: 10px;
 }
 @media screen and (max-width: 1023px) and (min-width: calc(767px + .01px)) {
-  .section.coordinates .container .single-coordinate {
+  .section.coordinates .container .wrapper .single-coordinate {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 30%;
+    width: 35%;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: calc(1023px + .01px)) {
-  .section.coordinates .container .single-coordinate {
+  .section.coordinates .container .wrapper .single-coordinate {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 30%;
+    width: 35%;
   }
 }
 @media screen and (max-width: 1400px) and (min-width: calc(1200px + .01px)) {
-  .section.coordinates .container .single-coordinate {
+  .section.coordinates .container .wrapper .single-coordinate {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 30%;
+    width: 35%;
   }
 }
 @media screen and (min-width: calc(1400px + .01px)) {
-  .section.coordinates .container .single-coordinate {
+  .section.coordinates .container .wrapper .single-coordinate {
     transition: all 0.4s ease, font-size 0s, background-color 0s, color 0s, top 0s, left 0s, right 0s, bottom 0s;
-    width: 30%;
+    width: 35%;
   }
 }
-.section.coordinates .container .single-coordinate .icon {
+.section.coordinates .container .wrapper .single-coordinate .icon {
   color: #14171c;
   font-size: 40px;
   background-color: #fbb03b;
@@ -1571,11 +1951,11 @@ body::-webkit-scrollbar-thumb {
   height: 64px;
   padding: 12px;
 }
-.section.coordinates .container .single-coordinate .title {
+.section.coordinates .container .wrapper .single-coordinate .title {
   font-size: 1.2em;
   font-weight: 600;
 }
-.section.coordinates .container .single-coordinate .text {
+.section.coordinates .container .wrapper .single-coordinate .text {
   font-size: 1em;
   font-weight: 300;
 }
@@ -2050,18 +2430,20 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.3s, color 0.1s;
-    padding: 0 10px;
     position: relative;
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:hover {
     color: #000;
-    transform: scale3d(1.1, 1.1, 1.1);
+    transform: translateY(-2px);
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:hover::before {
+    transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+    /*transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);*/
     /*width: 100%;
     opacity: 1;*/
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:active {
     color: #fff;
@@ -2071,7 +2453,20 @@ body::-webkit-scrollbar-thumb {
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link::before {
     content: "";
-    top: calc(50% - 1px);
+    transform-origin: 50% 100%;
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.3s;
+    transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+    transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.3s;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+    /*top: calc(50% - (2px/2));
     height: 2px;
     transform-origin: 100% 50%;
     transform: scale3d(0, 1, 1);
@@ -2080,7 +2475,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     background: currentColor;
     left: 0;
-    pointer-events: none;
+    pointer-events: none;*/
     /*display: block;
     margin: 0 auto;
     width: 0;
@@ -2157,18 +2552,20 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.3s, color 0.1s;
-    padding: 0 10px;
     position: relative;
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:hover {
     color: #000;
-    transform: scale3d(1.1, 1.1, 1.1);
+    transform: translateY(-2px);
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:hover::before {
+    transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+    /*transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);*/
     /*width: 100%;
     opacity: 1;*/
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:active {
     color: #fff;
@@ -2178,7 +2575,20 @@ body::-webkit-scrollbar-thumb {
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link::before {
     content: "";
-    top: calc(50% - 1px);
+    transform-origin: 50% 100%;
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.3s;
+    transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+    transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.3s;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+    /*top: calc(50% - (2px/2));
     height: 2px;
     transform-origin: 100% 50%;
     transform: scale3d(0, 1, 1);
@@ -2187,7 +2597,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     background: currentColor;
     left: 0;
-    pointer-events: none;
+    pointer-events: none;*/
     /*display: block;
     margin: 0 auto;
     width: 0;
@@ -2264,18 +2674,20 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.3s, color 0.1s;
-    padding: 0 10px;
     position: relative;
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:hover {
     color: #000;
-    transform: scale3d(1.1, 1.1, 1.1);
+    transform: translateY(-2px);
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:hover::before {
+    transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+    /*transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);*/
     /*width: 100%;
     opacity: 1;*/
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link:active {
     color: #fff;
@@ -2285,7 +2697,20 @@ body::-webkit-scrollbar-thumb {
   }
   .screen-container .nav-desktop .nav-items .nav-item .nav-link::before {
     content: "";
-    top: calc(50% - 1px);
+    transform-origin: 50% 100%;
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.3s;
+    transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+    transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.3s;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+    /*top: calc(50% - (2px/2));
     height: 2px;
     transform-origin: 100% 50%;
     transform: scale3d(0, 1, 1);
@@ -2294,7 +2719,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     background: currentColor;
     left: 0;
-    pointer-events: none;
+    pointer-events: none;*/
     /*display: block;
     margin: 0 auto;
     width: 0;
