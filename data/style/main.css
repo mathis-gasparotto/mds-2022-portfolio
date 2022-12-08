@@ -1930,7 +1930,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .screen-container .nav-mobile {
-  padding: 0.8rem 0;
+  padding-top: 0.8rem;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1962,6 +1962,20 @@ body::-webkit-scrollbar-thumb {
 }
 .screen-container .nav-mobile .nav-items .nav-item .nav-link .icon path {
   fill: #14171c;
+}
+.screen-container .nav-mobile .progress-bar {
+  width: 100%;
+  height: 0.6rem;
+  margin-top: 0.2rem;
+  position: relative;
+}
+.screen-container .nav-mobile .progress-bar .progressed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #fbb03b;
+  width: 0;
 }
 .screen-container .nav-desktop {
   display: none;

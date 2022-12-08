@@ -410,6 +410,9 @@ if (!empty($_POST)) {
             Contact
           </a></li>
         </ul>
+        <div class="progress-bar">
+          <span class="progressed"></span>
+        </div>
       </nav>
       <div class="scroll-to-top go-to-top" id="go-to-top">
         <a href="#top" class="go-to-top-link bg-white">
