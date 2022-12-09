@@ -41,6 +41,8 @@ $(document).ready(function() {
     go_to_top.style.top = window.pageYOffset + window.innerHeight - go_to_top_height - 30 + 'px'
 
     const mobile_navbar_progress = document.querySelector(".nav-mobile .progress-bar .progressed")
+
+    const skills_imgs = document.querySelectorAll(".skills .skills-section .img-container .img")
     
     window.onscroll = function() {
       const documentHeight_mobile = body.getBoundingClientRect().height - window.innerHeight
@@ -59,6 +61,28 @@ $(document).ready(function() {
         header.classList.remove('scrolled')
       }
 
+
+      // skills img spin
+
+      // Spin on different direction
+      const skills_imgs_length = skills_imgs.length
+      let additionnal_cont = 0
+      for(var i = 0; i < skills_imgs_length / 2; i++) {
+        skills_imgs[ 2 * i ].style.transform = "rotate(" + windowY * 0.2 +"deg)"
+      }
+      if (skills_imgs_length % 2) {
+        additionnal_cont = 1
+      } 
+      for(var i = 0; i < skills_imgs_length / 2 - additionnal_cont; i++) {
+        skills_imgs[ 2 * i + 1 ].style.transform = "rotate(" + windowY * -0.2 +"deg)"
+      }
+
+      // Spin on same direction
+      // skills_imgs.forEach(skills_img => {
+      //   skills_img.style.transform = "rotate(" + windowY * 0.2 +"deg)"
+      // })
+
+      
 
       // Mobile nav
 

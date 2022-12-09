@@ -31,30 +31,31 @@
      .img-container {
       width: 30%;
       @include tablet-portrait {
-       width: 40%;
+        width: 40%;
       }
       @include media(tablet-landscape, laptop, desktop) {
         width: unset;
       }
-       .img {
-         height: 75px;
-         width: 75px;
-         @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
-           width: 100px;
-           height: 100px;
-          }
+      .img {
+        transition: transform 0s !important;
+        height: 75px;
+        width: 75px;
+        @include media(tablet-portrait, tablet-landscape, laptop, desktop) {
+          width: 100px;
+          height: 100px;
+        }
         //  width: calc(40px + 2 * 12px);
         //  height: calc(40px + 2 * 12px);
-         //  background-color: $primaryColor;
+        //  background-color: $primaryColor;
         //  padding: 12px 0;
         //  border-radius: 50%;
-         path {
-          fill: $primaryColor;
-         }
+        path {
+        fill: $primaryColor;
+        }
         //  &.icon-dev {
         //    padding: 10px;
         //  }
-       }
+      }
      }
      .skill-content {
       width: 70%;

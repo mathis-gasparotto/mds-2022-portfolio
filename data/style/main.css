@@ -941,6 +941,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .section.skills .container .skills-section .img-container .img {
+  transition: transform 0s !important;
   height: 75px;
   width: 75px;
 }
