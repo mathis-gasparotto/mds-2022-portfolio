@@ -33,13 +33,13 @@ De plus, l'utilisateur se souviendra mieux de mon site grâce à cette petite fo
 
 ### Logos
 
-![Logo](https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-fond-blanc.png)
-![Logo](https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-noir-orange-fond-blanc.png)
-![Logo](https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-noir-fond-blanc.png)
-![Logo](https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-fond-noir.png)
-![Logo](https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-fond-noir-inner-white.png)
-![Logo](https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-blanc-fond-noir.png)
 
+<img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-fond-blanc.png" alt="logo" width="250"/>
+<img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-noir-orange-fond-blanc.png" alt="logo" width="250"/>
+<img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-noir-fond-blanc.png" alt="logo" width="250"/>
+<img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-fond-noir.png" alt="logo" width="250"/>
+<img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-fond-noir-inner-white.png" alt="logo" width="250"/>
+<img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-blanc-fond-noir.png" alt="logo" width="250"/>
 
 
 ## Règles d'ergonomie utilisées
@@ -115,9 +115,6 @@ En ce qui concerne les heuristiques de Bastien et Scapin, j’en ai utilisé plu
 
 
 
----
----
----
 ---
 
 *PS : le logo de la navbar en desktop change en partie de couleur quand le fond de cette navbar change (seul quelques parties du logo change de couleur)*
