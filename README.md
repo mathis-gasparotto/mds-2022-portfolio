@@ -3,15 +3,15 @@
 
 **[Lien du site](https://portfolio.mathisgasparotto.fr/)**
 
-***Avant toutes chose, il faut noter que pour voir le responsive du site, il est préférable de rechaarger la page une fois le type de device changé (il y a des propriétés JS qui se définissent au chargement du site, et par rapport à la taille de l'écran)***
+***Avant toute chose, il faut noter que pour voir le responsive du site, il est préférable de recharger la page une fois le type de device changé (il y a des propriétés JS qui se définissent au chargement du site, et par rapport à la taille de l'écran)***
 
 
 Pour concevoir ce site, je me suis inspiré de base sur un thème WordPress. 
-Ce thème ([Thème Neve](https://fr.wordpress.org/themes/neve/)) avait déjà un design assez ergonomique (aéré, design entres les sections assez distinct), et il m'avait séduit.
+Ce thème ([Thème Neve](https://fr.wordpress.org/themes/neve/)) avait déjà un design assez ergonomique (aéré, design entre les sections assez distinct), et il m'avait séduit.
 
 Puis, je suis tombé sur un tuto pour faire un site avec de la 3D intégré. 
 J'ai donc voulu tester, et j'ai rajouté mon style dessus. 
-Cette 3D que j'ai ajouté sur le site m'a permis, d'une part, de découvrir la 3D en CSS 😉, et d'autre part, de faire un site qui reste plaisant à l'utilisateur, et assez différents des autres sites, afin de pousser l'utilisateur à rester et à revenir sur mon site.
+Cette 3D que j'ai ajoutée sur le site m'a permis, d'une part, de découvrir la 3D en CSS 😉, et d'autre part, de faire un site qui reste plaisant à l'utilisateur, et assez différents des autres sites, afin de pousser l'utilisateur à rester et à revenir sur mon site.
 De plus, l'utilisateur se souviendra mieux de mon site grâce à cette petite fonctionnalité.
 
 ## Charte graphique
@@ -35,10 +35,8 @@ De plus, l'utilisateur se souviendra mieux de mon site grâce à cette petite fo
 
 
 <img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-fond-blanc.png" alt="logo" width="250"/>
-<img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-noir-orange-fond-blanc.png" alt="logo" width="250"/>
 <img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-noir-noir-fond-blanc.png" alt="logo" width="250"/>
 <img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-fond-noir.png" alt="logo" width="250"/>
-<img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-fond-noir-inner-white.png" alt="logo" width="250"/>
 <img src="https://portfolio.mathisgasparotto.fr/data/img/rogne-blanc-blanc-fond-noir.png" alt="logo" width="250"/>
 
 
