@@ -184,7 +184,7 @@ if (!empty($_POST)) {
                   <div class="projects-container">
                     <div class="project-container">
                       <div class="img-container">
-                        <img src="/data/img/site-personnel-mathis-gasparotto-developpeur-projet.jpg" class="img" alt="site-personnel-mathis-gasparotto-developpeur-projet" title="Image de mon projet personnel" loading="lazy">
+                        <img src="/data/img/site-personnel-mathis-gasparotto-developpeur-projet.jpg" class="img" alt="site-personnel-mathis-gasparotto-developpeur-projet" title="Illustration de mon projet personnel" loading="lazy">
                         <h3 class="title">Site personnel</h3>
                       </div>
                       <div class="text-container">
@@ -197,19 +197,19 @@ if (!empty($_POST)) {
                     </div>
                     <div class="project-container">
                       <div class="img-container">
-                        <img src="/data/img/generator-de-facture-laravel-mathis-gasparotto-developpeur-projet.jpg" class="img" alt="generator-de-facture-laravel-mathis-gasparotto-developpeur-projet" title="Image du projet du générateur de facture sous Laravel" loading="lazy">
+                        <img src="/data/img/generator-de-facture-laravel-mathis-gasparotto-developpeur-projet.jpg" class="img" alt="generator-de-facture-laravel-mathis-gasparotto-developpeur-projet" title="Illustration du projet du générateur de facture sous Laravel" loading="lazy">
                         <h3 class="title">Générateur de facture</h3>
                       </div>
                       <div class="text-container">
                         <p class="content text">
-                          Dans le cadre de ma 2ème année de mon Bachelor Web & Multimedia, j’ai eu l’occasion de découvrir le framework PHP Laravel. Durant cette découverte, j’ai notamment développé une plateforme de génération de factures. Pour un peu plus d’explication, cette plateforme permet, suite à la connexion à son compte, de gérer ses clients, gérer ses missions avec ces clients, et pouvoir gérer automatiquement tous les documents relatifs à une mission (facture, etc..). Durant ce projet, j’ai donc pu faire des CRUD, et gérer les données en base de données, ainsi que gérer des relations entre plusieurs tables de données (même si en réalité il manque juste la génération du pdf 😉)
+                          Dans le cadre de ma 2ème année de mon Bachelor Web & Multimedia, j’ai eu l’occasion de découvrir le framework PHP Laravel. Durant cette découverte, j’ai notamment développé une plateforme de génération de factures. Pour un peu plus d’explication, cette plateforme permet, suite à la connexion à son compte, de gérer ses clients, gérer ses missions avec ces clients, et pouvoir gérer automatiquement tous les documents relatifs à une mission (facture, etc..). Durant ce projet, j’ai donc pu faire des CRUD, et gérer les données en base de données, ainsi que gérer des relations entre plusieurs tables de données (même si en réalité il manque juste la génération du pdf 😉).
                         </p>
                         <a href="https://github.com/Mathis-Gasparotto/mds_dev_objet_2021/tree/master/quote-generator" class="btn read-more-btn btn-primary" target="_blank">Repository</a>
                       </div>
                     </div>
                     <div class="project-container">
                       <div class="img-container">
-                        <img src="/data/img/plateforme-de-vote-mathis-gasparotto-web-developpeur-laravel-projet.jpg" class="img" alt="plateforme-de-vote-mathis-gasparotto-web-developpeur-laravel-projet" title="Image du projet de plateforme de vote sous Laravel" loading="lazy">
+                        <img src="/data/img/plateforme-de-vote-mathis-gasparotto-web-developpeur-laravel-projet.jpg" class="img" alt="plateforme-de-vote-mathis-gasparotto-web-developpeur-laravel-projet" title="Illustration du projet de plateforme de vote sous Laravel" loading="lazy">
                         <h3 class="title">Plateforme de vote</h3>
                       </div>
                       <div class="text-container">
@@ -238,8 +238,7 @@ if (!empty($_POST)) {
                   <div class="right content-container">
                     <h2 class="title">Qui suis-je ?</h2>
                     <p class="text">
-                      Je suis un jeune étudiant passionné par l’informatique en général, mais surtout par le développement Web.<br> J’étudie actuellement à l’école de MyDigitalSchool en 3ème année de Bachelor Web &amp; Multimédia, où j'ai découvert
-                      un vrai passion pour le <strong>développement web</strong>. Je suis principalement passioné par le <strong>développement Back-End</strong>, avec un petit penchant pour le language de programme <strong>PHP</strong>.
+                      Je suis un jeune étudiant passionné par l’informatique en général, mais surtout par le développement Web.<br> J’étudie actuellement à l’école de MyDigitalSchool en 3ème année de Bachelor Web &amp; Multimédia, où j'ai découvert un vrai passion pour le <strong>développement web</strong>. Je suis principalement passioné par le <strong>développement Back-End</strong>, avec un petit penchant pour le language de programme <strong>PHP</strong>.
                     </p>
                   </div>
                 </div>

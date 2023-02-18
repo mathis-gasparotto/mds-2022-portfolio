@@ -4,7 +4,7 @@
     right: 3%;
     z-index: 99;
     opacity: 0;
-    @include mobile {
+    @include media (mobile, tablet-portrait) {
       top: unset !important;
       bottom: 105px;
     }
